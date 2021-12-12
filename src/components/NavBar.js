@@ -110,7 +110,7 @@ export default function NavBar() {
         </div> 
         <li>
           <NavLink 
-           to="/" exact
+           to="/immanuvelprathap" exact
            onClick={()=> setShowNav(!showNav)}
            role="button"
            onKeyDown={()=> setShowNav(!showNav)}
