@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+<a href="#"><img width="1000%" height="auto" src="https://i.imgur.com/iXuL1HG.png" height="175px" alt="centered image" align="middle" ></a>
+<h1 align="center">Hi <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px">, I'm Immanuvel</h1>
+<h3 align="center">I'm a Data Engineer from Banglore, India. Aspiring Data Scientist! </h3>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+....."Change the live of person or Change the World!”
 
-## Available Scripts
 
-In the project directory, you can run:
+I believe that leveraging data is the key to optimizing business productivity. Incorporating key insights from quality 
+data analytics into business decision making is what gives organizations an edge over its competition.
+Willingness to adapt to change, critical thinking, ability to work with and lead teams are my some of my most valuable qualities. 
+I am open to exploring and picking up additional skills as needed to fit into a specific job role.
 
-### `npm start`
+ | Data Analytics | ETL(Data Warehouse, Data Modelling, Data Mapping, Data Acquization, Data Wrangling) | Data Visualization (PowerBI, Tableau) | Machine Learning | Deep Learning | NLP | CNN | MySQL | MS Acess | Informatica |
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+## 🙋‍♂️ About Me
+-  Inspired as a Writer - Driven by Entrepreneurship - Qualified as a Mechanical Engineer - Passionate as a Transportation Designer - Pursuing Data Scientist - Data Preprocessing - R, Python - SQL - AI/ML Model Building and Testing, Presently on Deep Learning (Tensor Flow) on NLP, NLG. Demonstrated experience of 2+ years in Web Development Applications and cross-platform mobile applications using PHP, MySQL, HTML5, CSS.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- 🔭 I’m currently working on a Agriculture based Project **[Microsoft Farm Beats - Open CV, CNN, RNN using Drone Mapping Software]<a href="https://www.microsoft.com/en-us/garage/wall-of-fame/farmbeats/" target="_blank"> <img src="https://www.microsoft.com/en-us/garage/wp-content/uploads/sites/5/2019/06/MS_AI_Agriculture_DataVis_1600x600-4.jpg"/> </a>**
 
-### `npm run build`
+- 🌱 I'm Simultaneously learning **Data Structures and Algorithms** to become a better Developer
+ 
+- 👯 I’m looking to collaborate on **OpenSource Projects**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+ <!--👨‍💻 All of my projects are available at **[My Portfolio](https://)**-->
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- 📫 How to reach me **mailtoimmanuvel@gmail.com**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- ⚡  **Also, Passionate about the writting blogs and keeping logs of the ins and outs of my day-to-day-life.**
 
-### `npm run eject`
+## 🚀 Languages and Tools:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<p align="left"> 
+    <a href="https://www.jetbrains.com/pycharm/" target="_blank"> <img src="https://img.icons8.com/color/48/000000/pycharm.png"/> </a>  
+    <a href="https://www.anaconda.com/" target="_blank"> <img src="https://img.icons8.com/dusk/64/000000/anaconda.png" alt="mongodb" width="48" height="48"/> </a> 
+    <a href="https://www.ibm.com/cloud/learn/natural-language-processing#:~:text=Natural%20language%20processing%20(NLP)%20refers,same%20way%20human%20beings%20can." target="_blank"> <img src="https://img.icons8.com/external-becris-flat-becris/64/000000/external-natural-language-processing-artificial-intelligence-becris-flat-becris.png" alt="data viz " width="45" height="45"/> </a> 
+    <a href="https://postman.com" target="_blank"> <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="postman" width="45" height="45"/> </a>   
+    <a href="https://git-scm.com/" target="_blank"> <img src="https://img.icons8.com/color/48/000000/git.png"/> </a> 
+    <a href="https://www.ibm.com/cloud/learn/natural-language-processing#:~:text=Natural%20language%20processing%20(NLP)%20refers,same%20way%20human%20beings%20can." target="_blank"> <img src="https://img.icons8.com/ios-glyphs/30/000000/sql.png" alt="jenkins" width="48" height="48"/> </a>
+    <a href="https://www.ibm.com/cloud/learn/etl" target="_blank"> <img src="https://img.icons8.com/external-ddara-fill-ddara/64/000000/external-data-science-managements-ddara-fill-ddara.png" alt="data viz " width="45" height="45"/></a>
+    <a href="https://www.java.com" target="_blank"> <img src="https://img.icons8.com/color/48/000000/java-coffee-cup-logo.png"/> </a>
+    <a href="https://www.w3.org/html/" target="_blank"> <img src="https://img.icons8.com/color/48/000000/html-5.png"/> </a> 
+    <a href="https://www.python.org" target="_blank"> <img src="https://img.icons8.com/color/48/000000/python.png"/> </a> 
+    <a href="https://www.tableau.com/learn/articles/data-visualization" target="_blank"> <img src="https://img.icons8.com/external-inipagistudio-mixed-inipagistudio/64/000000/external-data-visualization-business-analytics-inipagistudio-mixed-inipagistudio.png" alt="data viz " width="45" height="45"/> </a> 
+    <a href="https://getbootstrap.com" target="_blank"> <img src="https://img.icons8.com/color/48/000000/bootstrap.png"/> </a> 
+    <a href="https://www.guru99.com/software-testing-introduction-importance.html" target="_blank"> <<img src="https://img.icons8.com/external-inipagistudio-mixed-inipagistudio/64/000000/external-testing-manufacture-process-inipagistudio-mixed-inipagistudio.png" alt="data viz " width="45" height="45"/> </a> 
+    <a href="https://www.tensorflow.org/" target="_blank"> <img src="https://img.icons8.com/color/48/000000/tensorflow.png"/> </a>
+    <a href="https://www.ibm.com/in-en/cloud/learn/machine-learning" target="_blank"> <img src="https://img.icons8.com/external-inipagistudio-mixed-inipagistudio/64/000000/external-machine-learning-data-processing-inipagistudio-mixed-inipagistudio.png" alt="machine learning" width="45" height="45"/>" </a> 
+    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"> <img src="https://img.icons8.com/color/48/000000/javascript.png"/> </a> 
+    <a href="https://www.w3.org/html/" target="_blank"> <img src="https://img.icons8.com/color/48/000000/html-5.png"/> </a> 
+    <a href="http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html" target="_blank"> <img src="https://img.icons8.com/external-becris-lineal-becris/64/000000/external-linear-regression-data-science-becris-lineal-becris.png" alt="data viz " width="45" height="45" /> </a> 
+    <a style="padding-right:8px;" href="https://www.deeplearning.ai/" target="_blank"> <img src="https://img.icons8.com/external-becris-flat-becris/64/000000/external-deep-learning-artificial-intelligence-becris-flat-becris.png" alt="data viz " width="45" height="45"/> </a> 
+    <a style="padding-right:8px;" href="https://www.mysql.com/" target="_blank"> <img src="https://img.icons8.com/fluent/50/000000/mysql-logo.png"/> </a>
+    <a href="https://www.tableau.com/" target="_blank"> <img src="https://img.icons8.com/color/48/000000/tableau-software.png"/> </a>
+    <a href="https://powerbi.microsoft.com/en/" target="_blank"> <img src="https://img.icons8.com/dusk/64/000000/power-bi.png" alt="data viz " width="45" height="45"/></a> 
+    <a href="https://www.w3schools.com/html/" target="_blank"><img src="https://img.icons8.com/ios/50/000000/html.png"/> </a> 
+    <a href="https://code.visualstudio.com/" target="_blank"> <img src="https://img.icons8.com/color/48/000000/visual-studio-code-2019.png"/> </a> 
+    <a href="https://office.live.com/start/excel.aspx" target="_blank"> <img src="https://img.icons8.com/color/48/000000/ms-excel.png"/> </a>
+    <a href="https://www.investopedia.com/terms/d/data-analytics.asp" target="_blank"> <img src="https://img.icons8.com/external-inipagistudio-mixed-inipagistudio/64/000000/external-data-analytics-data-analytics-inipagistudio-mixed-inipagistudio.png" alt="data viz " width="45" height="45"/> </a>
+</p>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<!-- [![React Badge](https://img.shields.io/badge/-React-61DBFB?style=for-the-badge&labelColor=black&logo=react&logoColor=61DBFB)](#)  [![Javascript Badge](https://img.shields.io/badge/-Javascript-F0DB4F?style=for-the-badge&labelColor=black&logo=javascript&logoColor=F0DB4F)](#) [![Typescript Badge](https://img.shields.io/badge/-Typescript-007acc?style=for-the-badge&labelColor=black&logo=typescript&logoColor=007acc)](#) [![Nodejs Badge](https://img.shields.io/badge/-Nodejs-3C873A?style=for-the-badge&labelColor=black&logo=node.js&logoColor=3C873A)](#) [![GraphQL Badge](https://img.shields.io/badge/-GraphQl-e535ab?style=for-the-badge&labelColor=black&logo=node.js&logoColor=e535ab)](#) -->
+<br/>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## 📊 My Github Stats
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## Connect with me:
+<p align="left">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<a href = "https://www.linkedin.com/in/immanuvel-prathap-/"><img src="https://img.icons8.com/fluent/48/000000/linkedin.png"/></a>
+<!-- <a href = "https://twitter.com/ImmanuvelPrath1"><img src="https://img.icons8.com/fluent/48/000000/twitter.png"/></a>
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+</p>
