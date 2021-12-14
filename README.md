@@ -1,6 +1,6 @@
 <a href="#"><img width="1000%" height="auto" src="https://i.imgur.com/iXuL1HG.png" height="175px" alt="centered image" align="middle" ></a>
 <h1 align="center">Hello World! <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px">, I'm Immanuvel</h1>
-<h3 align="center">[https://immanuvelprathap.github.io/immanuvelprathap/]<a href="https://immanuvelprathap.github.io/immanuvelprathap/" target="_blank"></h3> 
+<h3 align="center">[https://immanuvelprathap.in]<a href="https://immanuvelprathap.github.io/immanuvelprathap/" target="_blank"></h3> 
 <h3 align="center">I'm a Data Engineer from Banglore, India. Aspiring Data Scientist! </h3>
 
 ....."Change the live of person or Change the World!”
