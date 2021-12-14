@@ -6,10 +6,7 @@
 ....."Change the live of person or Change the World!”
 
 
-I believe that leveraging data is the key to optimizing business productivity. Incorporating key insights from quality 
-data analytics into business decision making is what gives organizations an edge over its competition.
-Willingness to adapt to change, critical thinking, ability to work with and lead teams are my some of my most valuable qualities. 
-I am open to exploring and picking up additional skills as needed to fit into a specific job role.
+Tech-Business-savvy and Aspiring Data Scientist with 2+ years as Application Development Analyst (Databases Warehouse, Databases Infrastructure) and 1+ years as Data Engineer (Databases, ML Models, Data Analytics). Overall 3+ years of progressive experience demonstrating the ability to deliver valuable insights via Data analytics and Advanced Data-Driven methods. Knowledgeable ETL Developer skilled in design, development and maintenance of ETL applications in Data Integration workspace. Willingness to adapt to change, picking up additional skills as needed to fit into a specific job role, ability to work with and lead teams are some of the most valuable qualities.
 
  | Data Analytics | ETL(Data Warehouse, Data Modelling, Data Mapping, Data Acquization, Data Wrangling) | Data Visualization (PowerBI, Tableau) | Machine Learning | Deep Learning | NLP | CNN | MySQL | MS Acess | Informatica |
 
