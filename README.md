@@ -14,7 +14,7 @@ Tech-Business-savvy and Aspiring Data Scientist with 2+ years as Application Dev
 
 ## 🙋‍♂️ About Me
  
-Inspired as a Writer - Driven by Entrepreneurship - Qualified as a Mechanical Engineer - Passionate as a Transportation Designer - Pursuing Data Scientist - Data Preprocessing - R, Python - SQL - AI/ML Model Building and Testing, Presently on Deep Learning (Tensor Flow) on NLP, NLG. Demonstrated experience of 2+ years in Web Development Applications and cross-platform mobile applications using PHP, MySQL, HTML5, CSS.
+- Inspired as a Writer - Driven by Entrepreneurship - Qualified as a Mechanical Engineer - Passionate as a Transportation Designer - Pursuing Data Scientist - Data Preprocessing - R, Python - SQL - AI/ML Model Building and Testing, Presently on Deep Learning (Tensor Flow) on NLP, NLG. Demonstrated experience of 2+ years in Web Development Applications and cross-platform mobile applications using PHP, MySQL, HTML5, CSS.
 
 - 🔭 I’m currently working on a Agriculture based Project **[Microsoft Farm Beats - Open CV, CNN, RNN using Drone Mapping Software]<a href="https://www.microsoft.com/en-us/garage/wall-of-fame/farmbeats/" target="_blank"> <img src="https://www.microsoft.com/en-us/garage/wp-content/uploads/sites/5/2019/06/MS_AI_Agriculture_DataVis_1600x600-4.jpg"/> </a>**
 
