@@ -21,7 +21,7 @@ Tech-Business-savvy and Aspiring Data Scientist with 2+ years as Application Dev
  
 - 👯 I’m looking to collaborate on **OpenSource Projects**
 
- <!--👨‍💻 All of my projects are available at **[My Portfolio](https://)**-->
+ 👨‍💻 All of my projects are available at **[My Portfolio](https://immanuvelprathap.in/)**
 
 - 📫 How to reach me **mailtoimmanuvel@gmail.com**
 
