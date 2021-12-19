@@ -85,9 +85,16 @@ Tech-Business-savvy and Aspiring Data Scientist with 2+ years as Application Dev
  <img align="left" alt=" immanuvelprathap's Github Stats" src="https://github-readme-stats.vercel.app/api/top-langs/?username=immanuvelprathap&layout=compact&theme=buefy&hide_border=true" />  -->
 
 ## Connect with me:
-<p align="left">
+<!-- <p align="left">
 
 <a href = "https://www.linkedin.com/in/immanuvel-prathap-/"><img src="https://img.icons8.com/fluent/48/000000/linkedin.png"/></a>
 <a href = "https://twitter.com/ImmanuvelPrath1"><img src="https://img.icons8.com/fluent/48/000000/twitter.png"/></a>
 
-</p>
+</p> -->
+ 
+ <a href="https://www.linkedin.com/in/immanuvel-prathap-/">
+  <img align="right" alt="Immanuvel Prathap | Linkedin" width="21px" src="https://img.icons8.com/fluent/48/000000/linkedin.png" />
+</a>
+<a href="https://twitter.com/ImmanuvelPrath1">
+  <img align="right" alt="Immanuvel Prathap | Twitter" width="20px" src="https://img.icons8.com/fluent/48/000000/twitter.png" />
+</a>
