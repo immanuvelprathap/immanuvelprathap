@@ -72,7 +72,7 @@ Tech-Business-savvy and Aspiring Data Scientist with 2+ years as Application Dev
  <a href="https://github.com/immanuvelprathap/github-readme-activity-graph"><img alt="Immanuvel Prathap's Activity Graph" src="https://activity-graph.herokuapp.com/graph?username=immanuvelprathap&bg_color=0D1117&color=5BCDEC&line=5BCDEC&point=FFFFFF&hide_border=true" /></a>
  
    <br/>
-    <a href="https://github.com/immanuvelprathap/github-readme-stats"><img alt="Immanuvel Prathap's Github Stats" src="https://github-readme-stats.vercel.app/api?username=immanuvelprathap&show_icons=true&count_private=true&theme=react&hide_border=true&bg_color=0D1117" /></a>
+    <a href="https://github.com/immanuvelprathap/github-readme-stats"><img alt="Immanuvel Prathap's Github Stats" src="https://github-readme-stats.vercel.app/api?username=immanuvelprathap&show_icons=true&count_private=true&theme=dark&hide_border=true&bg_color=0D1117" /></a>
   <a href="https://github.com/immanuvelprathap/github-readme-stats"><img alt="Immanuvel Prathap's Top Languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=immanuvelprathap&langs_count=8&count_private=true&layout=compact&theme=react&hide_border=true&bg_color=0D1117" /></a>
   <br/>
   <b>Note:</b> Top languages is only a metric of the languages my public code consists of and doesn't reflect experience or skill level.
