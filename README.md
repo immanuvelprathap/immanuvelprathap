@@ -63,8 +63,6 @@ Tech-Business-savvy and Aspiring Data Scientist with 2+ years as Application Dev
 
 ## 📊 My Github Stats
  
-[![Immanuvel's GitHub stats]
- 
 <img align="left" alt=" immanuvelprathap's Github Stats" src="https://github-readme-stats.vercel.app/api?username=immanuvelprathap&show_icons=true&hide_border=true" />
 
 ## Connect with me:
