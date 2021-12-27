@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/static/js/main.11ae58e1.chunk.js",
-    "main.js.map": "/static/js/main.11ae58e1.chunk.js.map",
+    "main.js": "/static/js/main.109f68e5.chunk.js",
+    "main.js.map": "/static/js/main.109f68e5.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.a5019716.js",
     "runtime-main.js.map": "/static/js/runtime-main.a5019716.js.map",
     "static/js/2.6da5c981.chunk.js": "/static/js/2.6da5c981.chunk.js",
@@ -11,15 +11,17 @@
     "static/media/Agro_Spray_Suit.840c95ee.png": "/static/media/Agro_Spray_Suit.840c95ee.png",
     "static/media/Automobile.b28ca0d3.jpg": "/static/media/Automobile.b28ca0d3.jpg",
     "static/media/ETL.35324ce1.png": "/static/media/ETL.35324ce1.png",
-    "static/media/Gradient_descent.91fbab28.webp": "/static/media/Gradient_descent.91fbab28.webp",
+    "static/media/Gradient_descent.109e3193.gif": "/static/media/Gradient_descent.109e3193.gif",
     "static/media/Hero.b5f12b15.jpg": "/static/media/Hero.b5f12b15.jpg",
     "static/media/Montserrat-Bold.079ca05d.ttf": "/static/media/Montserrat-Bold.079ca05d.ttf",
     "static/media/Montserrat-SemiBold.fa8441f3.ttf": "/static/media/Montserrat-SemiBold.fa8441f3.ttf",
     "static/media/RobotoMono-Regular.418a8f9f.ttf": "/static/media/RobotoMono-Regular.418a8f9f.ttf",
-    "static/media/TimeSeries.4f0cf701.jpg": "/static/media/TimeSeries.4f0cf701.jpg",
+    "static/media/TimeSeries.7594006e.gif": "/static/media/TimeSeries.7594006e.gif",
     "static/media/Warehouse_inventory.95cf2dfb.jpg": "/static/media/Warehouse_inventory.95cf2dfb.jpg",
     "static/media/about-page-img.b3ee3463.jpeg": "/static/media/about-page-img.b3ee3463.jpeg",
     "static/media/about-sec-img.16f84aca.jpg": "/static/media/about-sec-img.16f84aca.jpg",
+    "static/media/embedding.1a779d20.gif": "/static/media/embedding.1a779d20.gif",
+    "static/media/farmer.7561f172.jpg": "/static/media/farmer.7561f172.jpg",
     "static/media/projectImg.771236e1.png": "/static/media/projectImg.771236e1.png",
     "static/media/scroll-down-arrow.b013ca45.svg": "/static/media/scroll-down-arrow.b013ca45.svg",
     "static/media/social-media-arrow.f5e093ce.svg": "/static/media/social-media-arrow.f5e093ce.svg"
@@ -27,6 +29,6 @@
   "entrypoints": [
     "static/js/runtime-main.a5019716.js",
     "static/js/2.6da5c981.chunk.js",
-    "static/js/main.11ae58e1.chunk.js"
+    "static/js/main.109f68e5.chunk.js"
   ]
 }
