@@ -79,11 +79,11 @@ Inspired as a Writer - Driven by Entrepreneurship - Qualified as a Mechanical En
   <b>Note:</b> Top languages is only a metric of the languages my public code consists of and doesn't reflect experience or skill level.
 
 
-<br/>
+<!-- <br/>
  
 <img align="left" alt=" immanuvelprathap's Github Stats" src="https://github-readme-stats.vercel.app/api?username=immanuvelprathap&show_icons=true&hide_border=true" />
  
- <img align="left" alt=" immanuvelprathap's Github Stats" src="https://github-readme-stats.vercel.app/api/top-langs/?username=immanuvelprathap&layout=compact&theme=buefy&hide_border=true" /> 
+ <img align="left" alt=" immanuvelprathap's Github Stats" src="https://github-readme-stats.vercel.app/api/top-langs/?username=immanuvelprathap&layout=compact&theme=buefy&hide_border=true" />  -->
 
 ## Connect with me:
 <p align="left">
