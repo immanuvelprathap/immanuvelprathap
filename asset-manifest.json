@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/static/js/main.4127b546.chunk.js",
-    "main.js.map": "/static/js/main.4127b546.chunk.js.map",
+    "main.js": "/static/js/main.104ae557.chunk.js",
+    "main.js.map": "/static/js/main.104ae557.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.a5019716.js",
     "runtime-main.js.map": "/static/js/runtime-main.a5019716.js.map",
     "static/css/2.2b812612.chunk.css": "/static/css/2.2b812612.chunk.css",
@@ -14,7 +14,7 @@
     "static/media/Automobile.b28ca0d3.jpg": "/static/media/Automobile.b28ca0d3.jpg",
     "static/media/ETL.35324ce1.png": "/static/media/ETL.35324ce1.png",
     "static/media/Gradient_descent.109e3193.gif": "/static/media/Gradient_descent.109e3193.gif",
-    "static/media/Hero.b5f12b15.jpg": "/static/media/Hero.b5f12b15.jpg",
+    "static/media/Hero.31836fc9.jpg": "/static/media/Hero.31836fc9.jpg",
     "static/media/Montserrat-Bold.079ca05d.ttf": "/static/media/Montserrat-Bold.079ca05d.ttf",
     "static/media/Montserrat-SemiBold.fa8441f3.ttf": "/static/media/Montserrat-SemiBold.fa8441f3.ttf",
     "static/media/RobotoMono-Regular.418a8f9f.ttf": "/static/media/RobotoMono-Regular.418a8f9f.ttf",
@@ -35,6 +35,6 @@
     "static/js/runtime-main.a5019716.js",
     "static/css/2.2b812612.chunk.css",
     "static/js/2.1d1eb1e3.chunk.js",
-    "static/js/main.4127b546.chunk.js"
+    "static/js/main.104ae557.chunk.js"
   ]
 }
