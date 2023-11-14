@@ -1,6 +1,4 @@
-<a href="#"><img width="1000%" height="auto" src="https://i.imgur.com/iXuL1HG.png" height="175px" alt="centered image" align="middle" ></a>
-<img src="https://user-images.githubusercontent.com/74038190/225813708-98b745f2-7d22-48cf-9150-083f1b00d6c9.gif" width="500">
-<br><br>
+<a href="#"><img width="1000%" height="auto" src="https://user-images.githubusercontent.com/74038190/225813708-98b745f2-7d22-48cf-9150-083f1b00d6c9.gif" height="175px" alt="centered image" align="middle" ></a>
 <h1 align="center">Hello World! <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px">, I'm Immanuvel</h1>
 <h3 align="center"> My Portfolio: https://immanuvelprathap.in <a href="https://immanuvelprathap.github.io/immanuvelprathap/" target="_blank"></h3> 
 <h3 align="center">I'm a Data Engineer from Banglore, India. Aspiring Data Scientist! </h3>
