@@ -21,7 +21,7 @@ Inspired as a Writer - Driven by Entrepreneurship - Qualified as a Mechanical En
  
 - 👯 I’m looking to collaborate on **OpenSource Projects**
 
- 👨‍💻 All of my projects are available at **[My Portfolio](https://immanuvelprathap.in/)**
+ 👨‍💻 All of my projects are available at **[My Portfolio](https://github.com/immanuvelprathap?tab=repositories)**
 
 - 📫 How to reach me **mailtoimmanuvel@gmail.com**
 
