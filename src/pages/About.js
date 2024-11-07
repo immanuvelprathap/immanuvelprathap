@@ -174,7 +174,7 @@ export default function About() {
                 title="01/2023-04/2023"
                 items={['Senior Data Engineer at CIGNEX  DATAMATICS Pvt Ltd, Bangalore- India.']}
               />
-              <AboutInfoItems
+                            <AboutInfoItems
                 title="04/2023-Present"
                 items={['Senior Data Engineer at CIGRES  TECHNOLOGIES Pvt Ltd, Bangalore- India.']}
               />
