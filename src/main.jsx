@@ -8,9 +8,9 @@ import Typography from './styles/Typography.js';
 
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
+  <React.StrictMode>
     <GlobalStyles />
     <Typography />
     <App />
-  </StrictMode>,
+  </React.StrictMode>,
 )
