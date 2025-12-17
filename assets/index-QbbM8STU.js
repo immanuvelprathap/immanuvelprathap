@@ -359,11 +359,15 @@ color: var(--white);
   background-color: var(--orange);
   padding-top: 6rem;
   padding-bottom: 4rem; /* Added padding bottom for better spacing */
+  width: 100%; /* Forces full width *
 
   .container {
     display: flex;
     gap: 3rem;
-    justify-content: center; /* 1. Centers the columns horizontally */
+    justify-content: center;
+    width: 90%; /* Ensures container stays inside */
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
   .footer__col2,
