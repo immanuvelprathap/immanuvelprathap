@@ -358,20 +358,28 @@ color: var(--white);
 `;function Ga({heading:i="Col Heading",links:s=[{type:"Link",title:"Home",path:"/home"},{type:"Link",title:"About",path:"/about"}]}){return g.jsxs(f0,{children:[g.jsx("h2",{className:"heading",children:i}),g.jsx("ul",{children:s.map((a,u)=>g.jsx("li",{children:a.type==="Link"?g.jsx(vr,{to:a.path,children:a.title}):g.jsx("a",{href:a.path,target:"_blank",rel:"noreferrer",children:a.title})},u))})]})}const p0=Ye.div`
   background-color: var(--orange);
   padding-top: 6rem;
+  
   .container {
     display: flex;
     gap: 3rem;
   }
+
   .footer__col2,
   .footer__col3,
   .footer__col4 {
     flex: 1;
-    padding-left: 10rem;
+    /* padding-left: 10rem;  <--- REMOVED THIS (It was causing the misalignment) */
     color: var(--black);
-    title{
-        color: var(--dark-bg);
-    }
+    text-align: center; /* <--- ADDED THIS (Centers the text) */
   }
+
+  /* This fixes the title color syntax error you had */
+  .footer__col2 title,
+  .footer__col3 title,
+  .footer__col4 title {
+      color: var(--dark-bg);
+  }
+
   @media only screen and (max-width: 768px) {
     .container {
       flex-direction: column;
@@ -382,13 +390,6 @@ color: var(--white);
     }
     .footer__col1 .para {
       max-width: 100%;
-    }
-    .copyright {
-      .container {
-        div {
-          margin-top: 0;
-        }
-      }
     }
   }
 `;function Vo(){return g.jsx(p0,{children:g.jsxs("div",{className:"container",children:[g.jsx("div",{className:"footer__col2",children:g.jsx(Ga,{heading:"Go to",links:[{title:"Home",path:"/",type:"Link"},{type:"Link",title:"About",path:"/about"},{type:"Link",title:"Projects",path:"/projects"},{type:"Link",title:"Contact",path:"/contact"}]})}),g.jsx("div",{className:"footer__col3",children:g.jsx(Ga,{heading:"Contact Info",links:[{title:"+91 7022207916",path:"tel:+91 7022207916"},{title:"mailtoimmanuvel@gmail.com",path:"mailto:mailtoimmanuvel@gmail.com"},{title:"#421,Hommadevanahalli, Gottigere Post, Bannerghatta Road, Bangalore 560083.",path:"https://www.google.com/maps/place/Akshay+Mosaic+Flooring/@12.8462151,77.5980938,17z/data=!3m1!4b1!4m5!3m4!1s0x3bae6ae45f2a6c89:0x84d875d2e48b9a74!8m2!3d12.8462099!4d77.6002825"}]})}),g.jsx("div",{className:"footer__col4",children:g.jsx(Ga,{heading:"Let's be Social",links:[{title:"Facebook",path:"http://facebook.com"},{title:"Twitter",path:"http://twitter.com"},{title:"LinkedIn",path:"https://linkedin.com"}]})})]})})}function Td(){return g.jsxs("div",{children:[g.jsx(Mg,{}),g.jsx(Fg,{}),g.jsx(d0,{}),g.jsx(Vo,{})]})}const h0="/assets/about-page-img-B8Nj-fQ7.jpeg",m0=Ye.div`
