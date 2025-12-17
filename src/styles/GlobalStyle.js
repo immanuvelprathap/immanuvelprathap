@@ -29,11 +29,14 @@ const GlobalStyles = createGlobalStyle`
      --temptress:  #382124;
      --copper: #C46A33;
   }
-  html{
+/* --- BACKGROUND COLOR FIX HERE --- */
+  html, body {
     font-size: 10px;
-    font-family: 'Roboto Mono';
+    font-family: 'Roboto Mono', monospace;
     background-color: var(--dark-bg);
+    color: var(--white);
   }
+    
   ul,li{
     list-style: none;
   }

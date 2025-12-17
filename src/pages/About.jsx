@@ -172,11 +172,15 @@ export default function About() {
               />
               <AboutInfoItems
                 title="01/2023-04/2023"
-                items={['Senior Data Engineer at CIGNEX  DATAMATICS Pvt Ltd, Bangalore- India.']}
+                items={['Senior Data Engineer at Schneider Electric (CIGNEX  DATAMATICS Pvt Ltd), Bangalore- India.']}
               />
               <AboutInfoItems
-                title="04/2023-Present"
-                items={['Senior Data Engineer at CIGRES  TECHNOLOGIES Pvt Ltd, Bangalore- India.']}
+                title="04/2023-03/2025"
+                items={['Senior Data Engineer at Schneider Electric (CIGRES  TECHNOLOGIES Pvt Ltd), Bangalore- India.']}
+              />
+              <AboutInfoItems
+                title="09/2025-Present"
+                items={['Research Masters in Artificial Intelligence in Medicine at University of Bern, Bern- Switzerland.']}
               />
             </div>
           </div>
