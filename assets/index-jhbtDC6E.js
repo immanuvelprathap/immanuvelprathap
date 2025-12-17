@@ -358,15 +358,19 @@ color: var(--white);
 `;function Ya({heading:i="Col Heading",links:s=[{type:"Link",title:"Home",path:"/home"},{type:"Link",title:"About",path:"/about"}]}){return g.jsxs(f0,{children:[g.jsx("h2",{className:"heading",children:i}),g.jsx("ul",{children:s.map((a,u)=>g.jsx("li",{children:a.type==="Link"?g.jsx(vr,{to:a.path,children:a.title}):g.jsx("a",{href:a.path,target:"_blank",rel:"noreferrer",children:a.title})},u))})]})}const p0=Ge.div`
   background-color: var(--orange);
   padding-top: 6rem;
+  padding-bottom: 4rem; /* Added padding bottom for better spacing */
+
   .container {
     display: flex;
     gap: 3rem;
+    justify-content: center; /* 1. Centers the columns horizontally */
   }
+
   .footer__col2,
   .footer__col3,
   .footer__col4 {
     flex: 1;
-    padding-left: 10rem;
+    /*padding-left: 10rem;*/ /* padding-left: 10rem;  <--- DELETED: This was causing the overflow/white gap */
     color: var(--black);
     title{
         color: var(--dark-bg);
@@ -782,6 +786,7 @@ color: var(--white);
     font-family: 'Roboto Mono';
     background-color: var(--dark-bg);
     color: var(--white);
+    overflow-x: hidden; /* <--- ADD THIS to prevent horizontal scrolling/white gaps */
   }
   ul,li{
     list-style: none;
