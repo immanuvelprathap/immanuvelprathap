@@ -749,11 +749,12 @@ color: var(--white);
     }
   }
 `;function U0(){const[i,s]=L.useState(!1);return g.jsxs($0,{children:[g.jsx("div",{className:"mobile-menu-icon",onClick:()=>s(!i),role:"button",onKeyDown:()=>s(!i),tabIndex:0,children:g.jsx(s0,{})}),g.jsxs("ul",{className:i?"navItems":"navItems hide-item",children:[g.jsx("div",{className:"closeNavIcon",onClick:()=>s(!i),role:"button",onKeyDown:()=>s(!i),tabIndex:0,children:g.jsx(a0,{})}),g.jsx("li",{children:g.jsx(ui,{to:"/",onClick:()=>s(!i),role:"button",onKeyDown:()=>s(!i),tabIndex:0,children:"Home"})}),g.jsx("li",{children:g.jsx(ui,{to:"/about",onClick:()=>s(!i),role:"button",onKeyDown:()=>s(!i),tabIndex:0,children:"About"})}),g.jsx("li",{children:g.jsx(ui,{to:"/projects",onClick:()=>s(!i),role:"button",onKeyDown:()=>s(!i),tabIndex:0,children:"Projects"})}),g.jsx("li",{children:g.jsx(ui,{to:"/contact",onClick:()=>s(!i),role:"button",onKeyDown:()=>s(!i),tabIndex:0,children:"Contact"})})]})]})}function B0(){const{pathname:i}=Pn();return L.useEffect(()=>{window.scrollTo(0,0)},[i]),null}function H0(){return g.jsxs(Mm,{children:[g.jsx(U0,{}),g.jsx(B0,{}),g.jsxs(cm,{children:[g.jsx(mr,{path:"/",element:g.jsx(Td,{})}),g.jsx(mr,{path:"/about",element:g.jsx(v0,{})}),g.jsx(mr,{path:"/projects",element:g.jsx(T0,{})}),g.jsx(mr,{path:"/contact",element:g.jsx(F0,{})}),g.jsx(mr,{path:"/prathap-portfolio",element:g.jsx(Td,{})})]})]})}const V0=cf`
-*{
+  *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
   }
+  
   :root{
      --dark-bg: #262626;
      --orange: #FF8000;
@@ -777,24 +778,30 @@ color: var(--white);
      --temptress:  #382124;
      --copper: #C46A33;
   }
-  html{
+  
+  html, body {
     font-size: 10px;
-    font-family: 'Roboto Mono';
+    font-family: 'Roboto Mono', monospace;
     background-color: var(--dark-bg);
   }
+
   ul,li{
     list-style: none;
   }
+  
   a{
     text-decoration: none;
   }
+  
   img, svg{
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
+  
   button{
     outline: none;
+  } 
 
   .container {
     max-width: 1200px;
@@ -802,7 +809,7 @@ color: var(--white);
     margin: 0 auto;
   }
  
-/* Smooth Scroll  */
+  /* Smooth Scroll */
   [data-scrollbar] {
     height: 100vh;
     overflow: hidden;
@@ -816,7 +823,6 @@ color: var(--white);
         background: var(--gray-1);
       }
     }
-  }
   }
 `,W0="/assets/RobotoMono-Regular-Bdp2M05j.ttf",b0="/assets/Montserrat-SemiBold-U2BYPJfG.ttf",Q0="/assets/Montserrat-Bold-DwCw38g9.ttf",Y0=cf`
   @font-face {
