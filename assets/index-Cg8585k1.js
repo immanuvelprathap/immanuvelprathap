@@ -781,7 +781,7 @@ color: var(--white);
     font-size: 10px;
     font-family: 'Roboto Mono';
     background-color: var(--dark-bg);
-    color: var(--dark-bg);
+    color: var(--white);
   }
   ul,li{
     list-style: none;
