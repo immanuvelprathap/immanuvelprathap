@@ -62,13 +62,21 @@ Please change the parent <Route path="${O}"> to <Route path="${O==="/"?"*":`${O}
   margin-top: 2rem;
   .button {
     font-size: 2.2rem;
-    background-color: ${i=>i.outline?"transperant":"var(--copper)"};
+    /* Fixed typo here: transparent */
+    background-color: ${i=>i.outline?"transparent":"var(--orange)"};
     padding: 0.7em 2em;
     border: 2px solid var(--orange);
     border-radius: 8px;
     display: inline-block;
-    color: ${i=>i.outline?"var(--black)":"black"};
+    color: ${i=>i.outline?"var(--orange)":"var(--black)"};
+    transition: 0.3s ease;
   }
+  
+  .button:hover {
+    background-color: ${i=>i.outline?"var(--orange)":"transparent"};
+    color: ${i=>i.outline?"var(--black)":"var(--orange)"};
+  }
+
   @media only screen and (max-width: 768px) {
     .button {
       font-size: 1.8rem;
@@ -88,7 +96,8 @@ color: var(--white);
 }
 `;function xr({children:i}){return g.jsx(Tg,{children:g.jsx("p",{children:i})})}const zg=Ye.div`
   .hero {
-    margin-top: 30rem ;
+    /* Fixed spacing */
+    padding-top: 15rem; 
     height: 100vh;
     min-height: 1000px;
     width: 100%;
@@ -117,7 +126,6 @@ color: var(--white);
     width: 100%;
     height: 100%;
     margin: 0 auto;
-    /* border: 2px solid var(--orange); */
   }
   .hero__info {
     margin-top: 0rem;
@@ -194,34 +202,11 @@ color: var(--white);
       left: 0px;
       bottom: -15%;
       width: 20px;
-      .hero__social__indicator {
-        width: 20px;
-        p {
-          font-size: 1.2rem;
-        }
-        img {
-          max-height: 22px;
-        }
-      }
-      .hero__social__text {
-        ul {
-          li {
-            a {
-              font-size: 1.2rem;
-              color: var(--orange);
-              margin-bottom: 1rem;
-            }
-          }
-        }
-      }
     }
     .hero__scrollDown {
       right: 0;
       width: 20px;
       gap: 1rem;
-      p {
-        font-size: 1.3rem;
-      }
     }
   }
 `;function Mg(){return g.jsx(zg,{children:g.jsx("div",{className:"hero",children:g.jsxs("div",{className:"container",children:[g.jsxs("h1",{className:"hero__heading",children:[g.jsx("span",{children:"Hello, I am"}),g.jsx("span",{className:"hero__name",children:"Immanuvel Prathap"})]}),g.jsx("div",{className:"hero__img",children:g.jsx("img",{src:Rg,alt:""})}),g.jsxs("div",{className:"hero__info",children:[g.jsx(xr,{children:"I am a Tech-Business-Savvy individual, aspiring to be a Data Scientist with 2+ years of progressive experience demonstrating ability to deliver valuable insights via Data Analytics and Advanced data-driven methods. Most valuable qualities of myself is to incline quickly to learn the additional skills as needed to fit into those challenging tasks, if so, put forward by your organisation. Team player, Indeed."}),g.jsx(Do,{btnText:"Projects",btnLink:"/projects"})]}),g.jsxs("div",{className:"hero__social",children:[g.jsxs("div",{className:"hero__social__indicator",children:[g.jsx("p",{children:"Follow"}),g.jsx("img",{src:Ig,alt:"icon"})]}),g.jsx("div",{className:"hero__social__text",children:g.jsxs("ul",{children:[g.jsx("li",{children:g.jsx("a",{href:"https://twitter.com/ImmanuvelPrath1",target:"_blank",rel:"noreferrer",children:"Twitter"})}),g.jsx("li",{children:g.jsx("a",{href:"https://github.com/immanuvelprathap",target:"_blank",rel:"noreferrer",children:"Github"})}),g.jsx("li",{children:g.jsx("a",{href:"https://www.linkedin.com/in/immanuvel-prathap-/",target:"_blank",rel:"noreferrer",children:"LinkedIn"})})]})})]}),g.jsxs("div",{className:"hero__scrollDown",children:[g.jsx("p",{children:"Scroll"}),g.jsx("img",{src:Lg,alt:"ScrollDown Arrow"})]})]})})})}const Ag=Ye.div`
@@ -252,14 +237,15 @@ color: var(--white);
     align-items: center;
     justify-content: flex-start;
     text-align: left;
+    gap: 5rem; /* Added gap */
   }
   .aboutSection__left,
   .aboutSection__right {
     flex: 1;
   }
   .aboutImg{
-    margin-top: 16rem ;
-    max-width: 900px;
+    /* Removed large top margin */
+    max-width: 100%;
     border: 6px solid var(--orange);
   }
   .section-title {
@@ -332,13 +318,20 @@ color: var(--white);
   .Skills__allItems {
     display: flex;
     gap: 4rem;
-    justify-content: space-between;
+    justify-content: center; /* Centered items */
     margin-top: 5rem;
   }
+  
+  /* Ensures items don't get too squashed */
+  .Skills__allItems > * {
+      flex: 1;
+      max-width: 350px;
+  }
+
   @media only screen and (max-width: 768px) {
     .Skills__allItems {
       flex-direction: column;
-      max-width: 350px;
+      align-items: center;
       margin: 0 auto;
       margin-top: 5rem;
       gap: 5rem;
@@ -368,16 +361,15 @@ color: var(--white);
   .footer__col3,
   .footer__col4 {
     flex: 1;
-    /* padding-left: 10rem;  <--- REMOVED THIS (It was causing the misalignment) */
     color: var(--black);
-    text-align: center; /* <--- ADDED THIS (Centers the text) */
+    text-align: center; /* Centers the text */
   }
 
-  /* This fixes the title color syntax error you had */
-  .footer__col2 title,
-  .footer__col3 title,
-  .footer__col4 title {
-      color: var(--dark-bg);
+  /* Fix specific links/titles color if needed */
+  .footer__col2 a,
+  .footer__col3 a,
+  .footer__col4 a {
+      color: var(--black);
   }
 
   @media only screen and (max-width: 768px) {
@@ -388,11 +380,8 @@ color: var(--white);
         margin-top: 5rem;
       }
     }
-    .footer__col1 .para {
-      max-width: 100%;
-    }
   }
-`;function Vo(){return g.jsx(p0,{children:g.jsxs("div",{className:"container",children:[g.jsx("div",{className:"footer__col2",children:g.jsx(Ga,{heading:"Go to",links:[{title:"Home",path:"/",type:"Link"},{type:"Link",title:"About",path:"/about"},{type:"Link",title:"Projects",path:"/projects"},{type:"Link",title:"Contact",path:"/contact"}]})}),g.jsx("div",{className:"footer__col3",children:g.jsx(Ga,{heading:"Contact Info",links:[{title:"+91 7022207916",path:"tel:+91 7022207916"},{title:"mailtoimmanuvel@gmail.com",path:"mailto:mailtoimmanuvel@gmail.com"},{title:"#421,Hommadevanahalli, Gottigere Post, Bannerghatta Road, Bangalore 560083.",path:"https://www.google.com/maps/place/Akshay+Mosaic+Flooring/@12.8462151,77.5980938,17z/data=!3m1!4b1!4m5!3m4!1s0x3bae6ae45f2a6c89:0x84d875d2e48b9a74!8m2!3d12.8462099!4d77.6002825"}]})}),g.jsx("div",{className:"footer__col4",children:g.jsx(Ga,{heading:"Let's be Social",links:[{title:"Facebook",path:"http://facebook.com"},{title:"Twitter",path:"http://twitter.com"},{title:"LinkedIn",path:"https://linkedin.com"}]})})]})})}function Td(){return g.jsxs("div",{children:[g.jsx(Mg,{}),g.jsx(Fg,{}),g.jsx(d0,{}),g.jsx(Vo,{})]})}const h0="/assets/about-page-img-B8Nj-fQ7.jpeg",m0=Ye.div`
+`;function Vo(){return g.jsx(p0,{children:g.jsxs("div",{className:"container",children:[g.jsx("div",{className:"footer__col2",children:g.jsx(Ga,{heading:"Go to",links:[{title:"Home",path:"/",type:"Link"},{type:"Link",title:"About",path:"/about"},{type:"Link",title:"Projects",path:"/projects"},{type:"Link",title:"Contact",path:"/contact"}]})}),g.jsx("div",{className:"footer__col3",children:g.jsx(Ga,{heading:"Contact Info",links:[{title:"+91 7022207916",path:"tel:+91 7022207916"},{title:"mailtoimmanuvel@gmail.com",path:"mailto:mailtoimmanuvel@gmail.com"},{title:"#421,Hommadevanahalli, Gottigere Post, Bannerghatta Road, Bangalore 560083.",path:"https://maps.google.com"}]})}),g.jsx("div",{className:"footer__col4",children:g.jsx(Ga,{heading:"Let's be Social",links:[{title:"Facebook",path:"http://facebook.com"},{title:"Twitter",path:"http://twitter.com"},{title:"LinkedIn",path:"https://linkedin.com"}]})})]})})}function Td(){return g.jsxs("div",{children:[g.jsx(Mg,{}),g.jsx(Fg,{}),g.jsx(d0,{}),g.jsx(Vo,{})]})}const h0="/assets/about-page-img-B8Nj-fQ7.jpeg",m0=Ye.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
