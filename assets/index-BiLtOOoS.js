@@ -860,4 +860,4 @@ color: var(--white);
    font-size: 8px;
    font-family: "Amatic SC";
   }
-`;wh.createRoot(document.getElementById("root")).render(g.jsxs(We.StrictMode,{children:[g.jsx(V0,{}),g.jsx(Y0,{}),g.jsx(H0,{})]}));
+`;"serviceWorker"in navigator&&navigator.serviceWorker.getRegistrations().then(function(i){for(let s of i)s.unregister()});wh.createRoot(document.getElementById("root")).render(g.jsxs(We.StrictMode,{children:[g.jsx(V0,{}),g.jsx(Y0,{}),g.jsx(H0,{})]}));
