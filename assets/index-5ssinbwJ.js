@@ -409,7 +409,7 @@ color: var(--white);
     display: flex;
     gap: 1.5rem;
     position: absolute;
-    left: 40rem;
+    flex-wrap: wrap; /* Allows items to wrap on small screens */ /*left: 40rem;*/
   }
   .item {
     background-color: var(--deep-dark);
@@ -426,6 +426,7 @@ color: var(--white);
     }
     .title {
       font-size: 2rem;
+      min-width: 300px; /* Gives the title a fixed width so items line up */
     }
   }
 `;function ut({title:i="Title",items:s=["HTML","CSS"]}){return g.jsxs(m0,{children:[g.jsx("h1",{className:"title",children:i}),g.jsx("div",{className:"items",children:s.map((a,u)=>g.jsx("div",{className:"item",children:g.jsx(xr,{children:a})},u))})]})}const g0=Ge.div`
@@ -787,6 +788,7 @@ color: var(--white);
     background-color: var(--dark-bg);
     color: var(--white);
     overflow-x: hidden; /* <--- ADD THIS to prevent horizontal scrolling/white gaps */
+    width: 100%;
   }
   ul,li{
     list-style: none;
