@@ -6,6 +6,8 @@ import SocialMediaArrow from '../assets/images/social-media-arrow.svg';
 import ScrollDownArrow from '../assets/images/scroll-down-arrow.svg';
 import PText from './PText';
 import InteractiveConsole from './InteractiveConsole';
+import ThreeDCard from './ThreeDCard';
+import TelemetryCard from './TelemetryCard';
 
 const HeroStyles = styled.section`
   min-height: 100vh;
@@ -26,17 +28,18 @@ const HeroStyles = styled.section`
     font-size: 15vw;
     font-weight: 900;
     color: transparent;
-    -webkit-text-stroke: 1px var(--border-color);
+    -webkit-text-stroke: 1px rgba(0, 242, 254, 0.05);
     white-space: nowrap;
     pointer-events: none;
     z-index: 1;
     text-transform: uppercase;
+    animation: pulseGlow 5s infinite ease-in-out;
   }
 
   .hero__container {
     display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 6rem;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 8rem;
     align-items: center;
     position: relative;
     z-index: 2;
@@ -49,16 +52,18 @@ const HeroStyles = styled.section`
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 4rem;
+    width: 100%;
   }
 
   .hero__img-wrapper {
     position: relative;
     width: 100%;
-    max-width: 380px;
+    max-width: 320px;
     aspect-ratio: 4/5;
     background-color: var(--panel-bg);
     border: 1px solid var(--border-color);
-    box-shadow: 15px 15px 0 var(--border-color);
+    border-radius: 16px;
     overflow: hidden;
     
     img {
@@ -85,10 +90,13 @@ const HeroStyles = styled.section`
   .hero__name {
     font-family: 'Outfit', sans-serif;
     font-size: 5.5rem;
-    font-weight: 800;
+    font-weight: 900;
     line-height: 1.1;
-    letter-spacing: -0.04em;
-    color: var(--text-primary);
+    letter-spacing: -0.03em;
+    background: linear-gradient(135deg, var(--text-primary) 30%, var(--glow-cyan) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 30px rgba(0, 242, 254, 0.12);
   }
 
   .hero__desc {
@@ -230,23 +238,38 @@ export default function Hero() {
       <div className="hero__backdrop">Prathap</div>
       <div className="hero__container">
         <div className="hero__left">
-          <div className="hero__img-wrapper">
-            <img src={HeroImg} alt="Immanuvel Prathap S" />
+          <div className="animate-entry delay-1" style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+            <ThreeDCard maxTilt={15} scale={1.04} style={{ borderRadius: '16px', overflow: 'hidden', width: '100%', maxWidth: '320px' }}>
+              <div className="hero__img-wrapper">
+                <img src={HeroImg} alt="Immanuvel Prathap S" />
+              </div>
+            </ThreeDCard>
+          </div>
+          
+          <div className="animate-entry delay-3" style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+            <ThreeDCard maxTilt={12} scale={1.02} style={{ borderRadius: '16px', overflow: 'hidden', width: '100%', maxWidth: '420px' }}>
+              <TelemetryCard />
+            </ThreeDCard>
           </div>
         </div>
         <div className="hero__right">
-          <span className="hero__intro">Hello, I am</span>
-          <h1 className="hero__name">Immanuvel Prathap</h1>
-          <div className="hero__desc">
+          <span className="hero__intro animate-entry delay-1">Hello, I am</span>
+          <h1 className="hero__name animate-entry delay-2">Immanuvel Prathap</h1>
+          <div className="hero__desc animate-entry delay-3">
             <PText>
               I am a Senior Data Engineer & AI Researcher in Medicine with experience demonstrating ability to deliver valuable insights via Data Analytics and Advanced data-driven methods. Always eager to learn additional skills and solve complex challenges.
             </PText>
           </div>
-          <div className="hero__actions">
+          <div className="hero__actions animate-entry delay-4">
             <Button btnText="View Projects" btnLink="/projects" />
             <Button btnText="More About Me" btnLink="/about" outline />
           </div>
-          <InteractiveConsole />
+          
+          <div className="animate-entry delay-5" style={{ width: '100%' }}>
+            <ThreeDCard maxTilt={8} scale={1.01} style={{ borderRadius: '8px', overflow: 'hidden', width: '100%' }}>
+              <InteractiveConsole />
+            </ThreeDCard>
+          </div>
         </div>
       </div>
 

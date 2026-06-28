@@ -16,11 +16,16 @@ const FormStyle = styled.form`
 
   label {
     font-family: 'Outfit', sans-serif;
-    font-size: 1.6rem;
-    font-weight: 600;
-    color: var(--text-primary);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-secondary);
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    transition: color 0.3s ease;
+  }
+
+  .form-group:focus-within label {
+    color: var(--glow-cyan);
   }
 
   input,
@@ -29,15 +34,16 @@ const FormStyle = styled.form`
     font-size: 1.5rem;
     padding: 1.4rem 1.6rem;
     color: var(--text-primary);
-    background-color: var(--panel-bg);
+    background-color: rgba(255, 255, 255, 0.02);
     border: 1px solid var(--border-color);
     border-radius: 8px;
     outline: none;
-    transition: border-color 0.25s ease, background-color 0.25s ease;
+    transition: border-color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 
     &:focus {
-      border-color: var(--text-primary);
-      background-color: var(--bg-color);
+      border-color: var(--glow-cyan);
+      background-color: rgba(0, 242, 254, 0.02);
+      box-shadow: 0 0 15px rgba(0, 242, 254, 0.12);
     }
   }
 
@@ -47,21 +53,23 @@ const FormStyle = styled.form`
   }
 
   button[type='submit'] {
-    background-color: var(--text-primary);
-    color: var(--black);
+    background: var(--grad-hybrid);
+    color: #030307;
     font-family: var(--font-mono);
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    padding: 1.4rem 3rem;
+    padding: 1.4rem 3.2rem;
     border-radius: 8px;
     align-self: flex-start;
-    transition: transform 0.2s ease, opacity 0.2s ease;
+    box-shadow: 0 5px 15px rgba(0, 242, 254, 0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
     
     &:hover {
       transform: scale(1.02);
-      opacity: 0.9;
+      box-shadow: 0 8px 25px rgba(0, 242, 254, 0.25);
+      filter: brightness(1.1);
     }
     
     &:active {

@@ -4,6 +4,7 @@ import Button from './Button';
 import PText from './PText';
 import SectionTitle from './SectionTitle';
 import AboutImg from '../assets/images/about-sec-img.jpg';
+import ThreeDCard from './ThreeDCard';
 
 const AboutStyles = styled.div`
   padding: 10rem 4rem;
@@ -12,16 +13,21 @@ const AboutStyles = styled.div`
     align-items: center;
     justify-content: flex-start;
     text-align: left;
+    gap: 6rem;
   }
   .aboutSection__left,
   .aboutSection__right {
     flex: 1;
   }
+  .aboutSection__right {
+    border-radius: 12px;
+    overflow: hidden;
+  }
   .aboutImg {
-    margin-top: 8rem;
     max-width: 100%;
     border: 1px solid var(--border-color);
-    box-shadow: 10px 10px 0 var(--border-color);
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
   }
   .section-title {
     text-align: left;
@@ -35,7 +41,7 @@ const AboutStyles = styled.div`
     align-items: center;
     justify-content: flex-start;
     gap: 2rem;
-    margin-top: 2rem;
+    margin-top: 2.5rem;
   }
   @media only screen and (max-width: 950px) {
     .aboutSection__left {
@@ -49,6 +55,7 @@ const AboutStyles = styled.div`
     .container {
       flex-direction: column;
       text-align: center;
+      gap: 4rem;
     }
     .aboutSection__left,
     .aboutSection__right {
@@ -56,6 +63,8 @@ const AboutStyles = styled.div`
     }
     .aboutSection__right {
       margin-top: 3rem;
+      max-width: 350px;
+      margin: 3rem auto 0 auto;
     }
     .section-title {
       text-align: center;
@@ -93,9 +102,9 @@ export default function AboutSection() {
             <Button btnText="Read More" btnLink="/about" outline />
           </div>
         </div>
-        <div className="aboutSection__right">
+        <ThreeDCard maxTilt={15} scale={1.04} className="aboutSection__right" style={{ borderRadius: '12px' }}>
           <img className="aboutImg" src={AboutImg} alt="Img" />
-        </div>
+        </ThreeDCard>
       </div>
     </AboutStyles>
   );

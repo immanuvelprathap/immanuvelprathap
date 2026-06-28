@@ -8,7 +8,22 @@ import Footer from '../components/Footer';
 
 const ProjectStyle = styled.div`
   padding: 18rem 0 10rem 0;
-  background-color: var(--bg-color);
+  background: transparent;
+
+  /* Prezi zoom-in entry animation */
+  animation: preziZoomIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  transform-style: preserve-3d;
+  
+  @keyframes preziZoomIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.92) translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
 
   .projects__searchBar {
     position: relative;

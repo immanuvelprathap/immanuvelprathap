@@ -5,10 +5,26 @@ import Button from '../components/Button';
 import AboutImg from '../assets/images/about-page-img.jpeg';
 import AboutInfoItems from '../components/AboutInfoItems';
 import Footer from '../components/Footer';
+import ThreeDCard from '../components/ThreeDCard';
 
 const AboutPageStyles = styled.div`
   padding: 20rem 4rem 10rem 4rem;
-  background-color: var(--bg-color);
+  background: transparent;
+  
+  /* Prezi zoom-in entry animation */
+  animation: preziZoomIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  transform-style: preserve-3d;
+  
+  @keyframes preziZoomIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.92) translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
 
   .top-section {
     display: grid;
@@ -58,7 +74,8 @@ const AboutPageStyles = styled.div`
     aspect-ratio: 4/5;
     background-color: var(--panel-bg);
     border: 1px solid var(--border-color);
-    box-shadow: 15px 15px 0 var(--border-color);
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
     overflow: hidden;
     
     img {
@@ -262,9 +279,9 @@ export default function About() {
               </div>
               <Button btnText="Explore Projects" btnLink="/projects" />
             </div>
-            <div className="right">
+            <ThreeDCard maxTilt={15} scale={1.03} className="right" style={{ borderRadius: '16px' }}>
               <img src={AboutImg} alt="Immanuvel Prathap S" />
-            </div>
+            </ThreeDCard>
           </div>
           
           <div className="about__info__items">

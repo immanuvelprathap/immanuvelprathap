@@ -4,10 +4,26 @@ import { MdEmail, MdLocalPhone, MdPlace } from 'react-icons/md';
 import ContactForm from './ContactForm';
 import ContactInfoItems from './ContactInfoItems';
 import SectionTitle from './SectionTitle';
+import ThreeDCard from './ThreeDCard';
 
 const ContactSectionStyle = styled.section`
   padding: 18rem 0 10rem 0;
-  background-color: var(--bg-color);
+  background: transparent;
+
+  /* Prezi zoom-in entry animation */
+  animation: preziZoomIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  transform-style: preserve-3d;
+  
+  @keyframes preziZoomIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.92) translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
 
   .contactSection__wrapper {
     display: grid;
@@ -30,7 +46,9 @@ const ContactSectionStyle = styled.section`
     border: 1px solid var(--border-color);
     border-radius: 12px;
     padding: 4rem;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
   }
 
   @media only screen and (max-width: 960px) {
@@ -68,9 +86,9 @@ export default function ContactSection() {
               text="Bern, Switzerland / Bangalore, India" 
             />
           </div>
-          <div className="right">
+          <ThreeDCard maxTilt={8} scale={1.01} className="right" style={{ borderRadius: '12px' }}>
             <ContactForm />
-          </div>
+          </ThreeDCard>
         </div>
       </div>
     </ContactSectionStyle>
