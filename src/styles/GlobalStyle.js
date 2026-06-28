@@ -1,200 +1,123 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
-*{
+  * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
   }
-  :root{
-     --dark-bg: #262626;
-     --orange: #FF8000;
-     --orange-2: #fc9212;
-     --whisper: #E4E4E4;
-     --silver: #BDBDBD;
-     --weldon-blue: #8394A1;
-     --cadet-grey: #95A3AE;
-     --silver-sand: #C6C6C6;
-     --spanish-gray: #989898;
-     --gray: #808080;
-     --granite-gray: #676767;
-     --Quartz: #4B4B4C;
-     --dark-charcoal:#333333;
-     --gray-1: #BCB4B4;
-     --deep-dark: #1E1E1E;
-     --gray-2: #363636;
-     --white : white;
-     --black: #111111;
-     --rich-black: #09081F;
-     --temptress:  #382124;
-     --copper: #C46A33;
+
+  :root {
+    /* Monochrome Palette - Dark Mode (Default) */
+    --bg-color: #0a0a0c;
+    --panel-bg: #141416;
+    --border-color: #222225;
+    --text-primary: #ffffff;
+    --text-secondary: #a0a0a5;
+    --text-muted: #55555c;
+    
+    /* Legacy variables mapping to prevent breaking old styled-components */
+    --dark-bg: var(--bg-color);
+    --deep-dark: var(--panel-bg);
+    --gray-2: var(--border-color);
+    --white: var(--text-primary);
+    --gray-1: var(--text-secondary);
+    --black: var(--bg-color);
+    --orange: var(--text-primary);
+    --orange-2: var(--text-secondary);
+    
+    /* Typography Font Sizes */
+    --font-mono: 'Space Mono', 'Roboto Mono', monospace;
+    --font-sans: 'Outfit', 'Inter', sans-serif;
   }
-/* --- BACKGROUND COLOR FIX HERE --- */
+
+  [data-theme='light'] {
+    /* Monochrome Palette - Light Mode */
+    --bg-color: #f7f7f9;
+    --panel-bg: #ffffff;
+    --border-color: #e5e5eb;
+    --text-primary: #0a0a0c;
+    --text-secondary: #5a5a60;
+    --text-muted: #a0a0a5;
+    
+    --white: var(--text-primary);
+    --black: #ffffff;
+  }
+
   html, body {
     font-size: 10px;
-    font-family: 'Roboto Mono', monospace;
-    background-color: var(--dark-bg);
-    color: var(--white);
+    font-family: var(--font-sans);
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
   }
-    
-  ul,li{
+
+  ul, li {
     list-style: none;
   }
-  a{
+
+  a {
     text-decoration: none;
+    color: inherit;
   }
-  img, svg{
+
+  img, svg {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    filter: grayscale(100%) contrast(1.1) brightness(0.95);
+    transition: filter 0.4s ease, transform 0.4s ease, opacity 0.4s ease;
   }
-  button{
+
+  img:hover {
+    filter: grayscale(100%) contrast(1.25) brightness(1.05);
+  }
+
+  button {
     outline: none;
+    border: none;
+    cursor: pointer;
+    background: none;
+    color: inherit;
+    font-family: inherit;
+  }
 
   .container {
     max-width: 1200px;
     width: 90%;
     margin: 0 auto;
   }
- 
-/* Smooth Scroll  */
-  [data-scrollbar] {
-    height: 100vh;
-    overflow: hidden;
-    background-color: var(--gray-1);
-    .scroll-content {
-      background-color: var(--dark-bg);
-    }
-    .scrollbar-track.scrollbar-track-y {
-      background: var(--deep-dark);
-      .scrollbar-thumb-y {
-        background: var(--gray-1);
-      }
-    }
+
+  /* Fine mechanical grid border styling */
+  .grid-border {
+    position: relative;
   }
+  .grid-border::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--border-color);
+  }
+
+  /* Custom styling for scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--bg-color);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--text-muted);
   }
 `;
+
 export default GlobalStyles;
-
-// import { createGlobalStyle } from 'styled-components';
-
-// const GlobalStyles = createGlobalStyle`
-// *{
-//     padding: 0;
-//     margin: 0;
-//     box-sizing: border-box;
-//   }
-//   :root{
-//     --dark-bg: #262626;
-//     --orange: #FF8000;
-//     --orange-2: #fc9212;
-//     --whisper: #E4E4E4;
-//     --silver: #BDBDBD;
-//     --weldon-blue: #8394A1;
-//     --cadet-grey: #95A3AE;
-//     --silver-sand: #C6C6C6;
-//     --spanish-gray: #989898;
-//     --gray: #808080;
-//     --granite-gray: #676767;
-//     --Quartz: #4B4B4C;
-//     --dark-charcoal:#333333;
-//     --gray-1: #BCB4B4;
-//     --deep-dark: #1E1E1E;
-//     --gray-2: #363636;
-//     --white : white;
-//     --black: #111111;
-//     --rich-black: #09081F;
-//     --temptress:  #382124;
-//     --copper: #C46A33;
-//   }
-//   html{
-//     font-size: 10px;
-//     font-family: 'Roboto Mono', "Amatic SC";
-//     /*font-family: "Amatic SC";*/
-//     background-color: var(--dark-bg);
-//   }
-//   ul,li{
-//     list-style: none;
-//   }
-//   a{
-//     text-decoration: none;
-//   }
-//   img, svg{
-//     width: 60%;
-//     height: 60%;
-//     display: inline-block;
-//     margin-left: auto;
-//     margin-right: auto;
-//     object-fit: contain;
-//     padding-top: 50px;
-//     padding-right: 30px;
-//     padding-bottom: 0px;
-//     padding-left: 30px; 
-//   }
-
-//   .scroll{
-//      max-height: 45px;
-//      width: 16px;
-//      margin: 0 auto;
-//     }
-
-//   .button{
-//     outline: none
-//   }
-
-//   .hero__social,
-//   .hero__scrollDown{
-//      display: flex;
-//      flex-direction: column;
-//      gap: 2rem;
-//      position: absolute;
-//      bottom: 20px;
-//      width: 50px;
-//  }
-//   .hero__social{
-//      left: 100px;
-//  }
-//   .hero__scrollDown{
-//      right: 150px;
-//  }
-//   .hero__social__indicator,
-//   .hero__scrollDown{
-//     width: 50px;
-//     p{
-//       font-size: 1.6rem;
-//       transform: translateY(-70px) rotate(90deg);
-//       letter-spacing: .7rem;
-//       text-transform: uppercase;
-//     }
-
-// }
-//   .centered {
-//   position: absolute;
-//   top: 103%;
-//   left: 45%;
-//   transform: translate(-50%, -50%);
-//   }
-//   .container{
-//     max-width: 1200px;
-//     width: 90%;
-//     margin: auto;
-//   }
-
-// /* Smooth Scroll  */
-//   [data-scrollbar] {
-//     height: 100vh;
-//     overflow: hidden;
-//     background-color: var(--gray-1);
-//     .scroll-content {
-//       background-color: var(--whisper);
-//     }
-//     .scrollbar-track.scrollbar-track-y {
-//       background: var(--white);
-//       .scrollbar-thumb-y {
-//         background: var(--gray-1);
-//       }
-//     }
-//   }
-// `;
-
-// export default GlobalStyles;

@@ -1,46 +1,27 @@
 import { createGlobalStyle } from 'styled-components';
-import RobotoMonoRegular from '../assets/fonts/RobotoMono-Regular.ttf';
-import MontserratSemiBold from '../assets/fonts/Montserrat-SemiBold.ttf';
-import MontserratBold from '../assets/fonts/Montserrat-Bold.ttf';
 
 const Typography = createGlobalStyle`
-  @font-face {
-    font-family: 'Roboto Mono', monospace;;
-    font-family: 'Amatic SC', cursive;
-    src: url(${'https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;1,100&display=swap'}) 
-    src url(${'https://fonts.googleapis.com/css2?family=Amatic+SC&family=Roboto+Mono:ital,wght@0,100;1,100&display=swap'})
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-  }
-  @font-face {
-    font-family: 'RobotoMono Regular';
-    src: url(${RobotoMonoRegular});
-    font-style: normal;
-  }
-  @font-face {
-    font-family: 'Montserrat SemiBold';
-    src: url(${MontserratSemiBold});
-    font-style: normal;
-  }
-  @font-face {
-    font-family: 'Montserrat Bold';
-    src: url(${MontserratBold});
-    font-style: normal;
+  html {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-primary);
   }
 
-  html{
-    font-family: 'Amatic SC';
-    color: var(--orange);
+  * {
+    font-family: 'Inter', sans-serif;
   }
-  *{
-    font-family: 'Roboto Mono', monospace;;
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--text-primary);
   }
-  h1,h2,h3,h4,h5,h6{
-    font-family: 'Amatic SC';
-  }
-  .centered{
-   color: var(--gray-2);
-   font-size: 8px;
-   font-family: "Amatic SC";
+
+  code, pre, .mono, .hero__social__indicator p, .hero__scrollDown p, .navItems a {
+    font-family: 'Space Mono', monospace;
+    letter-spacing: 0.05em;
   }
 `;
 

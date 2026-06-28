@@ -1,26 +1,25 @@
-import React from 'react'
+import React from 'react';
 import styled from 'styled-components';
 
 const Pstyle = styled.div`
-max-width: 500px;
-margin-left: auto;
-margin-right: auto;
-font-family: 'Roboto Mono', monospace;;
-font-size: 2rem;
-line-height: 1.3em;
-color: var(--white);
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: var(--font-sans);
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
 
-@media only screen and (max-width: 768px){
-    font-size: 1.5rem;
-}
+  @media only screen and (max-width: 768px) {
+    font-size: 1.4rem;
+  }
 `;
 
-function PText({children}) {
-    return (
-        <Pstyle>
-            <p>{children}</p>
-        </Pstyle>
-    )
+function PText({ children }) {
+  return (
+    <Pstyle className="para">
+      <p>{children}</p>
+    </Pstyle>
+  );
 }
 
-export default PText
+export default PText;

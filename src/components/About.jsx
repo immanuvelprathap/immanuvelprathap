@@ -17,10 +17,11 @@ const AboutStyles = styled.div`
   .aboutSection__right {
     flex: 1;
   }
-  .aboutImg{
-    margin-top: 16rem ;
-    max-width: 900px;
-    border: 6px solid var(--orange);
+  .aboutImg {
+    margin-top: 8rem;
+    max-width: 100%;
+    border: 1px solid var(--border-color);
+    box-shadow: 10px 10px 0 var(--border-color);
   }
   .section-title {
     text-align: left;
