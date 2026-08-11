@@ -1,47 +1,106 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import ProjectImg from '../assets/images/projectImg.png';
+import ThreeDCard from './ThreeDCard';
 
 const ProjectItemStyles = styled.div`
+  background-color: var(--panel-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    border-color: rgba(0, 242, 254, 0.35);
+    
+    .projectItem__img img {
+      transform: scale(1.05);
+      filter: grayscale(0%) contrast(1.1) brightness(1.05);
+    }
+
+    .projectItem__title {
+      background: var(--grad-hybrid);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
   .projectItem__img {
     width: 100%;
-    height: 200px;
-    border-radius: 12px;
+    height: 220px;
     overflow: hidden;
-    display: inline-block;
-    border: 3px solid var(--orange);
+    display: block;
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(180deg, transparent 60%, rgba(3, 3, 7, 0.4) 100%);
+      pointer-events: none;
+    }
+    
     img {
+      width: 100%;
       height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s ease;
     }
   }
+
   .projectItem__info {
-    margin-top: 1rem;
-    background-color: var(--deep-dark);
-    padding: 1rem;
-    border-radius: 12px;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 1.5rem;
   }
+
   .projectItem__title {
+    font-family: 'Outfit', sans-serif;
     font-size: 2.2rem;
-    color: var(--orange);
+    font-weight: 700;
+    color: var(--text-primary);
+    transition: color 0.3s ease;
   }
+
   .projectItem__desc {
-    font-size: 1.6rem;
-    font-family: 'RobotoMono Regular';
-    margin-top: 1rem;
-    color: var(--white);
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    flex-grow: 1;
   }
-  @media only screen and (max-width: 768px) {
-    .projectItem__img {
-      height: 350px;
+
+  .projectButton {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-family: var(--font-mono);
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--glow-cyan);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: auto;
+    align-self: flex-start;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease, gap 0.2s ease, color 0.2s ease;
+    
+    &:hover {
+      border-color: var(--glow-cyan);
+      color: var(--text-primary);
+      gap: 1.2rem;
     }
-  }
-  .projectButton{
-    display: inline-block;
-    font-size: 1.8rem;
-    text-decoration: underline;
-    margin: 2rem 0;
-    color: var(--White)
   }
 `;
 
@@ -49,20 +108,34 @@ export default function ProjectItem({
   img = ProjectImg,
   title = 'Project Name',
   desc = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-  link
+  link,
 }) {
   return (
-    <ProjectItemStyles>
-      <Link to="/projects" className="projectItem__img">
-        <img src={img} alt="project img" />
-      </Link>
-      <div className="projectItem__info">
-        <Link to="#">
+    <ThreeDCard maxTilt={12} scale={1.03} style={{ height: '100%', borderRadius: '8px' }}>
+      <ProjectItemStyles>
+        <a 
+          href={link || '#'} 
+          target={link ? "_blank" : "_self"} 
+          rel="noreferrer" 
+          className="projectItem__img"
+        >
+          <img src={img} alt={title} />
+        </a>
+        <div className="projectItem__info">
           <h3 className="projectItem__title">{title}</h3>
-        </Link>
-        <p className="projectItem__desc">{desc}</p>
-        {link && <a className={'projectButton'} target="_blank" rel="noreferrer" href={link}>Open Project</a>}
-      </div>
-    </ProjectItemStyles>
+          <p className="projectItem__desc">{desc}</p>
+          {link && (
+            <a 
+              className="projectButton" 
+              target="_blank" 
+              rel="noreferrer" 
+              href={link}
+            >
+              Explore Project <span>→</span>
+            </a>
+          )}
+        </div>
+      </ProjectItemStyles>
+    </ThreeDCard>
   );
 }

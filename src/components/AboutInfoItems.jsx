@@ -1,38 +1,58 @@
 import React from 'react';
 import styled from 'styled-components';
-import PText from './PText';
 
 const AboutItemsStyles = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
-  position: relative;
-  /* gap: 5rem; */
   margin-top: 3rem;
+  gap: 2rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 2rem;
+
   .title {
-    font-size: 2.4rem;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    width: 200px;
+    flex-shrink: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
   }
+
   .items {
     display: flex;
-    gap: 1.5rem;
-    position: absolute;
-    left: 40rem;
+    flex-wrap: wrap;
+    gap: 1rem;
   }
+
   .item {
-    background-color: var(--deep-dark);
-    padding: 1rem;
-    border-radius: 8px;
+    background-color: var(--panel-bg);
+    border: 1px solid var(--border-color);
+    padding: 0.8rem 1.6rem;
+    border-radius: 6px;
+    font-size: 1.4rem;
+    color: var(--text-secondary);
+    transition: border-color 0.2s ease, color 0.2s ease;
+    
+    &:hover {
+      border-color: var(--text-primary);
+      color: var(--text-primary);
+    }
   }
+
   @media only screen and (max-width: 768px) {
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
-    .items {
-      position: initial;
-      gap: 1rem;
-    }
+    
     .title {
-      font-size: 2rem;
+      width: 100%;
+    }
+    
+    .items {
+      width: 100%;
     }
   }
 `;
@@ -43,11 +63,11 @@ export default function AboutInfoItem({
 }) {
   return (
     <AboutItemsStyles>
-      <h1 className="title">{title}</h1>
+      <h3 className="title">{title}</h3>
       <div className="items">
         {items.map((item, index) => (
           <div className="item" key={index}>
-            <PText>{item}</PText>
+            <span>{item}</span>
           </div>
         ))}
       </div>

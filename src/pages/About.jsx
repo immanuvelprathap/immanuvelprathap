@@ -5,75 +5,258 @@ import Button from '../components/Button';
 import AboutImg from '../assets/images/about-page-img.jpeg';
 import AboutInfoItems from '../components/AboutInfoItems';
 import Footer from '../components/Footer';
+import ThreeDCard from '../components/ThreeDCard';
 
 const AboutPageStyles = styled.div`
   padding: 20rem 4rem 10rem 4rem;
+  background: transparent;
+  
+  /* Prezi zoom-in entry animation */
+  animation: preziZoomIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  transform-style: preserve-3d;
+  
+  @keyframes preziZoomIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.92) translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+
   .top-section {
-    display: flex;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 6rem;
     align-items: center;
-    justify-content: center;
+  }
+  
+  .left {
+    display: flex;
+    flex-direction: column;
     gap: 2rem;
   }
-  .left {
-    flex: 3;
-  }
-  .right {
-    flex: 2;
-  }
+
   .about__subheading {
-    font-size: 2.2rem;
-    margin-bottom: 2rem;
+    font-family: var(--font-mono);
+    font-size: 1.6rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    
     span {
-      background-color: var(--deep-dark);
-      padding: 0.5rem;
-      border-radius: 8px;
+      color: var(--text-primary);
+      font-weight: 600;
     }
   }
+
   .about__heading {
-    font-size: 3.6rem;
-    margin-bottom: 3rem;
+    font-family: 'Outfit', sans-serif;
+    font-size: 5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.04em;
   }
+
   .about__info {
-    margin-bottom: 4rem;
     .para {
-      max-width: 100%;
+      font-size: 1.6rem;
+      line-height: 1.7;
+      color: var(--text-secondary);
     }
   }
+
   .right {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4/5;
+    background-color: var(--panel-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    
     img {
-      border: 6px solid var(--orange);
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
+
   .about__info__items {
     margin-top: 15rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
   }
-  .about__info__item {
-    margin-bottom: 10rem;
 
+  .about__info__item {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
   }
+
   .about__info__heading {
-    font-size: 3.6rem;
+    font-family: 'Outfit', sans-serif;
+    font-size: 3.2rem;
+    font-weight: 700;
     text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 2px solid var(--text-primary);
+    padding-bottom: 1rem;
+    display: inline-block;
+    max-width: fit-content;
   }
-  @media only screen and (max-width: 768px) {
-    padding: 10rem 0;
+
+  /* Timeline Styling */
+  .timeline {
+    position: relative;
+    padding-left: 3rem;
+    margin-top: 2rem;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0.8rem;
+      top: 0;
+      width: 1px;
+      height: 100%;
+      background-color: var(--border-color);
+    }
+  }
+
+  .timeline__item {
+    position: relative;
+    margin-bottom: 6rem;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: -2.7rem;
+      top: 0.6rem;
+      width: 1.6rem;
+      height: 1.6rem;
+      border-radius: 50%;
+      background-color: var(--bg-color);
+      border: 2px solid var(--text-primary);
+      transition: background-color 0.3s ease;
+    }
+    
+    &:hover::before {
+      background-color: var(--text-primary);
+    }
+  }
+
+  .timeline__header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .timeline__title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+
+  .timeline__company {
+    font-family: var(--font-mono);
+    font-size: 1.4rem;
+    color: var(--text-secondary);
+  }
+
+  .timeline__date {
+    font-family: var(--font-mono);
+    font-size: 1.3rem;
+    color: var(--text-muted);
+    background-color: var(--panel-bg);
+    border: 1px solid var(--border-color);
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+  }
+
+  .timeline__desc {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+  }
+
+  @media only screen and (max-width: 960px) {
     .top-section {
+      grid-template-columns: 1fr;
+      gap: 6rem;
+      text-align: center;
+    }
+    .left {
+      align-items: center;
+    }
+    .right {
+      max-width: 380px;
+      margin: 0 auto;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    padding: 12rem 2rem 6rem 2rem;
+    
+    .timeline__header {
       flex-direction: column;
-      gap: 5rem;
-    }
-    .about__subheading {
-      font-size: 1.8rem;
-    }
-    .about__heading {
-      font-size: 2.8rem;
-    }
-    .about__info__heading {
-      font-size: 3rem;
+      align-items: flex-start;
+      gap: 0.5rem;
     }
   }
 `;
 
 export default function About() {
+  const experiences = [
+    {
+      date: '09/2025 - Present',
+      title: 'Research Masters in Artificial Intelligence in Medicine',
+      company: 'University of Bern (Bern, Switzerland)',
+      desc: 'Developing specialized machine learning and deep learning methodologies applied directly in clinical and medical settings.'
+    },
+    {
+      date: '04/2023 - 03/2025',
+      title: 'Senior Data Engineer',
+      company: 'Schneider Electric (CIGRES Technologies Pvt Ltd, Bangalore)',
+      desc: 'Optimized enterprise database warehouse infrastructure, built resilient ETL pipelines, and engineered data flows handling high-frequency metrics.'
+    },
+    {
+      date: '01/2023 - 04/2023',
+      title: 'Senior Data Engineer',
+      company: 'Schneider Electric (CIGNEX Datamatics Pvt Ltd, Bangalore)',
+      desc: 'Designed robust data modeling systems, managed database integrations, and worked in Agile/Scrub structures to deliver critical sales data engineering utilities.'
+    },
+    {
+      date: '2020 - 2022',
+      title: 'Data Engineer',
+      company: 'EdgeRock Software Solutions (Bangalore)',
+      desc: 'Formulated Extract-Transform-Load frameworks, cleaned and wrangled large datasets for descriptive analytics, and built initial data pipeline structures using Python.'
+    },
+    {
+      date: '2019 - 2020',
+      title: 'Transportation Design Student',
+      company: 'Scuola Politecnica di Design (Milan, Italy)',
+      desc: 'Merged mechanical concepts with automotive design aesthetics, training heavily in structural blueprints, sketching, and 3D rendering methodologies.'
+    },
+    {
+      date: '2017 - 2019',
+      title: 'Application Development Analyst',
+      company: 'ESOFTCUBE Technology (Tamil Nadu)',
+      desc: 'Coordinated infrastructure deployments and supported application development, database queries, and system engineering procedures.'
+    }
+  ];
+
   return (
     <>
       <AboutPageStyles>
@@ -86,102 +269,79 @@ export default function About() {
               <h2 className="about__heading">Tech-Business-Savvy</h2>
               <div className="about__info">
                 <PText>
-                  I am from Bangalore, Karnataka. The Silicon Valley of India.
-                  Since my childhood, i love art and design/ automation and technology. I believe all go hand-in-hand from the place surrounding me.
+                  I am a passionate researcher and engineer originally from Bangalore, Karnataka (the Silicon Valley of India) and currently pursuing advanced research in Switzerland. 
+                  My background is uniquely cross-disciplinary, starting with Mechanical Engineering, evolving into Data Engineering, and now transitioning into Artificial Intelligence in Medicine.
                   <br /> <br />
-                  I started coding since I finished my Bachelors. Coding is also an
-                  art for me. I eagerly explore the extreme nature to code and automate stuffs using technology. I find it really interesting and I
-                  enjoyed the process a lot.
-                  <br />
-                  <br />
-                  My vision is to make the world a better place. To begin with in your immediate surroundings. Now almost
-                  everything is becoming better than ever. And we have the Information for pretty much everything happening 
-                  in our immediate surrounding. It is time for us to dig into the data and optimize the solutions of our past, present and future.
-                  Let's go!
+                  To me, code is an art form. It is the framework through which we observe, structure, and optimize the complexity of the world around us. With over 3 years of professional engineering experience, I specialize in building robust pipelines and systems that transform raw data into critical insights.
+                  <br /> <br />
+                  My vision is to optimize the systems of our past and present to build a highly optimized future—focusing on healthcare, technology, and commercial automation. Let's build!
                 </PText>
               </div>
-              <Button btnText="Download CV" btnLink="#" />
+              <Button btnText="Explore Projects" btnLink="/projects" />
             </div>
-            <div className="right">
-              <img src={AboutImg} alt="me" />
-            </div>
+            <ThreeDCard maxTilt={15} scale={1.03} className="right" style={{ borderRadius: '16px' }}>
+              <img src={AboutImg} alt="Immanuvel Prathap S" />
+            </ThreeDCard>
           </div>
+          
           <div className="about__info__items">
+            {/* Education section */}
             <div className="about__info__item">
-              <h1 className="about__info__heading">Education</h1>
-
+              <h2 className="about__info__heading">Education</h2>
+              <AboutInfoItems
+                title="Varsity (AI)"
+                items={['Research Masters in AI in Medicine', 'University of Bern, Switzerland']}
+              />
+              <AboutInfoItems
+                title="Varsity (Eng)"
+                items={['B.Tech in Mechanical Engineering', 'Jain University, Bangalore']}
+              />
+              <AboutInfoItems
+                title="College"
+                items={['St.Josephs Pre-University College, Bangalore']}
+              />
               <AboutInfoItems
                 title="School"
-                items={['St.Josephs Boys High School, Bangalore.']}
-              />
-              <AboutInfoItems
-                title="Collage"
-                items={['St.Josephs Pre-University College, Bangalore.']}
-              />
-              <AboutInfoItems
-                title="Varsity"
-                items={['Jain University, Bangalore.']}
+                items={['St.Josephs Boys High School, Bangalore']}
               />
             </div>
+
+            {/* Skills section */}
             <div className="about__info__item">
-              <h1 className="about__info__heading">My Skillsets</h1>
-
+              <h2 className="about__info__heading">My Skillsets</h2>
               <AboutInfoItems
-                title="FrontEnd Languages"
-                items={['HTML', 'CSS', 'JavaScript']}
-              />
-              
-              <AboutInfoItems
-                title="FrontEnd Frameworks and Libraries"
-                items={['React.js', 'CSS', 'JavaScript']}
-              />
-
-              <AboutInfoItems
-                title="BackEnd Languages"
-                items={['PHP','Python', 'JavaScript']}
-              />
-
-              <AboutInfoItems
-                title="BackEnd Frameworks and Libraries"
-                items={['Django']}
+                title="AI & Machine Learning"
+                items={['Deep Learning', 'CNN / RNN', 'LSTM', 'OpenCV', 'Clustering', 'Classification', 'NLP', 'Computer Vision']}
               />
               <AboutInfoItems
-                title="Design"
-                items={['Photoshop', 'InDesign', 'Adobe Illustrator', 'Keyshot']}
+                title="Data Engineering"
+                items={['ETL Processes', 'Data Modeling', 'Data Warehousing', 'Data Wrangling', 'Informatica']}
               />
-
               <AboutInfoItems
-                title="Manufacturing"
-                items={['CATIA V5', 'FEA', 'Matlab']}
-              />   
+                title="Languages & DB"
+                items={['Python', 'SQL (MySQL)', 'PHP', 'HTML5', 'CSS3', 'JavaScript']}
+              />
+              <AboutInfoItems
+                title="Tools & Design"
+                items={['Power BI', 'Tableau', 'Docker', 'Git', 'Matlab', 'CATIA V5', 'Adobe Photoshop', 'Illustrator', 'Keyshot']}
+              />
             </div>
-            <div className="about__info__item">
-              <h1 className="about__info__heading">Experiences</h1>
 
-              <AboutInfoItems
-                title="2017-2019"
-                items={['Application Development Analyst at ESOFTCUBE TECHNOLOGY, Tamil Nadu- India.']}
-              />
-              <AboutInfoItems
-                title="2019-2020"
-                items={[' Design Student at Scuola Politecnica di Design, Milan-Italy.']}
-              />
-              <AboutInfoItems
-                title="2020-2022"
-                items={['Data Engineer at EdgeRock Software Solutions, Bangalore- India.']}
-              />
-              <AboutInfoItems
-                title="01/2023-04/2023"
-                items={['Senior Data Engineer at Schneider Electric (CIGNEX  DATAMATICS Pvt Ltd), Bangalore- India.']}
-              />
-              <AboutInfoItems
-                title="04/2023-03/2025"
-                items={['Senior Data Engineer at Schneider Electric (CIGRES  TECHNOLOGIES Pvt Ltd), Bangalore- India.']}
-              />
-              <AboutInfoItems
-                title="09/2025-Present"
-                items={['Research Masters in Artificial Intelligence in Medicine at University of Bern, Bern- Switzerland.']}
-              />
+            {/* Experience section */}
+            <div className="about__info__item">
+              <h2 className="about__info__heading">Experiences</h2>
+              <div className="timeline">
+                {experiences.map((exp, index) => (
+                  <div className="timeline__item" key={index}>
+                    <div className="timeline__header">
+                      <h3 className="timeline__title">{exp.title}</h3>
+                      <span className="timeline__date">{exp.date}</span>
+                    </div>
+                    <div className="timeline__company">{exp.company}</div>
+                    <p className="timeline__desc">{exp.desc}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

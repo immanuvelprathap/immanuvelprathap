@@ -7,40 +7,81 @@ import ProjectItem from '../components/ProjectItem';
 import Footer from '../components/Footer';
 
 const ProjectStyle = styled.div`
-  padding: 10rem 0;
-  .projects__allItems {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 5rem;
-    margin-top: 5rem;
+  padding: 18rem 0 10rem 0;
+  background: transparent;
+
+  /* Prezi zoom-in entry animation */
+  animation: preziZoomIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  transform-style: preserve-3d;
+  
+  @keyframes preziZoomIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.92) translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
   }
+
   .projects__searchBar {
     position: relative;
-    width: 300px;
+    width: 320px;
     margin-top: 5rem;
+    margin-bottom: 2rem;
   }
+
   .projects__searchBar input {
     width: 100%;
-    font-size: 2rem;
-    padding: 0.8rem;
-    color: var(--black);
-    border-radius: 6px;
+    font-size: 1.6rem;
+    font-family: var(--font-mono);
+    padding: 1.2rem 4.5rem 1.2rem 1.6rem;
+    color: var(--text-primary);
+    background-color: var(--panel-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
     outline: none;
-    border: none;
+    transition: border-color 0.25s ease;
+    
+    &::placeholder {
+      color: var(--text-muted);
+    }
+
+    &:focus {
+      border-color: var(--text-primary);
+    }
   }
+
   .projects__searchBar .searchIcon {
     position: absolute;
-    width: 2rem;
-    right: 1rem;
+    width: 2.2rem;
+    height: 2.2rem;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: var(--text-secondary);
   }
-  .projects__searchBar .searchIcon path {
-    color: var(--deep-dark);
+
+  .projects__allItems {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 4rem;
+    margin-top: 5rem;
   }
+
   @media only screen and (max-width: 768px) {
+    padding-top: 14rem;
+    
     .projects__searchBar,
     .projects__searchBar form,
     .projects__searchBar input {
       width: 100%;
+    }
+    
+    .projects__allItems {
+      gap: 3rem;
     }
   }
 `;
@@ -48,21 +89,24 @@ const ProjectStyle = styled.div`
 export default function Projects() {
   const [searchText, setSearchText] = useState('');
   const [projectsData, setProjectsData] = useState(ProjectsInfo);
+
   useEffect(() => {
-    if (searchText === '') return;
+    if (searchText === '') {
+      setProjectsData(ProjectsInfo);
+      return;
+    }
     setProjectsData(() =>
       ProjectsInfo.filter((item) =>
-        item.name.toLowerCase().match(searchText.toLowerCase())
+        item.name.toLowerCase().includes(searchText.toLowerCase())
       )
     );
   }, [searchText]);
+
   const handleChange = (e) => {
     e.preventDefault();
     setSearchText(e.target.value);
-    if (!e.target.value.length > 0) {
-      setProjectsData(ProjectsInfo);
-    }
   };
+
   return (
     <>
       <ProjectStyle>
@@ -72,12 +116,13 @@ export default function Projects() {
             subheading="some of my recent"
           />
           <div className="projects__searchBar">
-            <form>
+            <form onSubmit={(e) => e.preventDefault()}>
               <input
                 type="text"
                 value={searchText}
                 onChange={handleChange}
-                placeholder="Project Name"
+                placeholder="Search projects..."
+                aria-label="Search Projects"
               />
               <MdSearch className="searchIcon" />
             </form>
@@ -99,4 +144,3 @@ export default function Projects() {
     </>
   );
 }
-

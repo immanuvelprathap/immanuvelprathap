@@ -2,6 +2,8 @@ import React from 'react';
 import Hero from "../components/Hero";
 import About from "../components/About";
 import Skills from '../components/Skills';
+import ProjectsSection from '../components/ProjectSection';
+import ContactBanner from '../components/ContactBanner';
 import Footer from '../components/Footer';
 
 export default function Home() {
@@ -10,7 +12,9 @@ export default function Home() {
       <Hero />
       <About />
       <Skills />
-      <Footer></Footer>
+      <ProjectsSection />
+      <ContactBanner />
+      <Footer />
     </div>
   );
 }

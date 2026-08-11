@@ -5,143 +5,229 @@ import Button from './Button';
 import SocialMediaArrow from '../assets/images/social-media-arrow.svg';
 import ScrollDownArrow from '../assets/images/scroll-down-arrow.svg';
 import PText from './PText';
+import InteractiveConsole from './InteractiveConsole';
+import ThreeDCard from './ThreeDCard';
+import TelemetryCard from './TelemetryCard';
 
-const HeroStyles = styled.div`
-  .hero {
-    margin-top: 30rem ;
-    height: 100vh;
-    min-height: 1000px;
-    width: 100%;
-    text-align: center;
-    display: flex;
+const HeroStyles = styled.section`
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 12rem 0 8rem 0;
+  overflow: hidden;
+
+  /* Backdrop outlined name */
+  .hero__backdrop {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Outfit', sans-serif;
+    font-size: 15vw;
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(0, 242, 254, 0.05);
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 1;
+    text-transform: uppercase;
+    animation: pulseGlow 5s infinite ease-in-out;
+  }
+
+  .hero__container {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 8rem;
     align-items: center;
-    justify-content: center;
     position: relative;
-  }
-  .hero__heading {
-    font-size: 2rem;
-    margin-bottom: -4rem;
-    position: relative;
-    span {
-      display: inline-block;
-      width: 100%;
-    }
-    .hero__name {
-      font-family: 'Montserrat SemiBold';
-      font-size: 6rem;
-      color: var(--white);
-    }
-  }
-  .hero__img {
-    max-width: 900px;
-    width: 100%;
-    height: 100%;
+    z-index: 2;
+    max-width: 1200px;
+    width: 90%;
     margin: 0 auto;
-    /* border: 2px solid var(--orange); */
   }
-  .hero__info {
-    margin-top: 0rem;
-  }
-  .hero__social,
-  .hero__scrollDown {
+
+  .hero__left {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    position: absolute;
-    bottom: 20px;
-    width: 50px;
+    align-items: center;
+    gap: 4rem;
+    width: 100%;
   }
-  .hero__social {
-    left: 50px;
+
+  .hero__img-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+    aspect-ratio: 4/5;
+    background-color: var(--panel-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    overflow: hidden;
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
-  .hero__scrollDown {
-    right: 50px;
+
+  .hero__right {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
   }
-  .hero__social__indicator,
-  .hero__scrollDown {
-    width: 50px;
-    p {
+
+  .hero__intro {
+    font-family: var(--font-mono);
+    font-size: 1.4rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+  }
+
+  .hero__name {
+    font-family: 'Outfit', sans-serif;
+    font-size: 5.5rem;
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    background: linear-gradient(135deg, var(--text-primary) 30%, var(--glow-cyan) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 30px rgba(0, 242, 254, 0.12);
+  }
+
+  .hero__desc {
+    .para {
       font-size: 1.6rem;
-      transform: translateY(-70px) rotate(90deg);
-      letter-spacing: 0.7rem;
+      line-height: 1.6;
+      color: var(--text-secondary);
+      max-width: 500px;
+    }
+  }
+
+  .hero__actions {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .hero__social {
+    position: absolute;
+    left: 3rem;
+    bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    z-index: 5;
+    
+    .social-indicator {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      
+      p {
+        font-size: 1.2rem;
+        transform: rotate(90deg) translateY(-20px);
+        color: var(--text-secondary);
+        text-transform: uppercase;
+      }
+      
+      img {
+        width: 1.2rem;
+        filter: invert(var(--theme-invert, 0));
+      }
+    }
+    
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 5rem;
+      margin-top: 2rem;
+      
+      li a {
+        font-family: var(--font-mono);
+        font-size: 1.2rem;
+        color: var(--text-secondary);
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        transition: color 0.2s ease;
+        
+        &:hover {
+          color: var(--text-primary);
+        }
+      }
+    }
+  }
+
+  .hero__scrollDown {
+    position: absolute;
+    right: 3rem;
+    bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    z-index: 5;
+    
+    p {
+      font-size: 1.2rem;
+      writing-mode: vertical-rl;
+      color: var(--text-secondary);
       text-transform: uppercase;
     }
+    
     img {
-      max-height: 45px;
-      width: 16px;
+      width: 1.2rem;
+      animation: bounce 2s infinite;
+      filter: invert(var(--theme-invert, 0));
+    }
+  }
+
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-8px);
+    }
+    60% {
+      transform: translateY(-4px);
+    }
+  }
+
+  @media only screen and (max-width: 960px) {
+    .hero__backdrop {
+      font-size: 18vw;
+    }
+    .hero__container {
+      grid-template-columns: 1fr;
+      gap: 5rem;
+      text-align: center;
+      justify-items: center;
+    }
+    .hero__right {
+      align-items: center;
+    }
+    .hero__desc .para {
       margin: 0 auto;
-      object-fit: contain;
+    }
+    .hero__img-wrapper {
+      max-width: 320px;
+    }
+    .hero__social, .hero__scrollDown {
+      display: none;
     }
   }
-  .hero__scrollDown {
-    img {
-      max-height: 70px;
-    }
-  }
-  .hero__social__text {
-    ul {
-      li {
-        margin-top: 6rem;
-        a {
-          display: inline-block;
-          font-size: 1.8rem;
-          transform: rotate(-90deg);
-          letter-spacing: 2px;
-          margin-bottom: 6rem;
-          color: var(--orange);
-        }
-      }
-    }
-  }
-  @media only screen and (max-width: 768px) {
-    .hero {
-      min-height: 750px;
-    }
-    .hero__heading {
-      font-size: 1.4rem;
-      margin-bottom: -3rem;
-      .hero__name {
-        font-size: 4.5rem;
-      }
-    }
-    .hero__img {
-      height: 300px;
-    }
-    .hero__info {
-      margin-top: 3rem;
-    }
-    .hero__social {
-      left: 0px;
-      bottom: -15%;
-      width: 20px;
-      .hero__social__indicator {
-        width: 20px;
-        p {
-          font-size: 1.2rem;
-        }
-        img {
-          max-height: 22px;
-        }
-      }
-      .hero__social__text {
-        ul {
-          li {
-            a {
-              font-size: 1.2rem;
-              color: var(--orange);
-              margin-bottom: 1rem;
-            }
-          }
-        }
-      }
-    }
-    .hero__scrollDown {
-      right: 0;
-      width: 20px;
-      gap: 1rem;
-      p {
-        font-size: 1.3rem;
-      }
+
+  @media only screen and (max-width: 580px) {
+    padding-top: 10rem;
+    .hero__name {
+      font-size: 4rem;
     }
   }
 `;
@@ -149,290 +235,72 @@ const HeroStyles = styled.div`
 export default function Hero() {
   return (
     <HeroStyles>
-      <div className="hero">
-        <div className="container">
-          <h1 className="hero__heading">
-            <span>Hello, I am</span>
-            <span className="hero__name">Immanuvel Prathap</span>
-          </h1>
-          <div className="hero__img">
-            <img src={HeroImg} alt="" />
+      <div className="hero__backdrop">Prathap</div>
+      <div className="hero__container">
+        <div className="hero__left">
+          <div className="animate-entry delay-1" style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+            <ThreeDCard maxTilt={15} scale={1.04} style={{ borderRadius: '16px', overflow: 'hidden', width: '100%', maxWidth: '320px' }}>
+              <div className="hero__img-wrapper">
+                <img src={HeroImg} alt="Immanuvel Prathap S" />
+              </div>
+            </ThreeDCard>
           </div>
-          <div className="hero__info">
-            <PText>
-              I am a Tech-Business-Savvy individual, aspiring to be a Data Scientist with 2+ years of progressive experience demonstrating ability to deliver valuable insights via Data Analytics and Advanced data-driven methods. Most valuable qualities of myself is to incline quickly to learn the additional skills as needed to fit into those challenging tasks, if so, put forward by your organisation. Team player, Indeed.
-
-            </PText>
-            <Button btnText="Projects" btnLink="/projects" />
-          </div>
-          <div className="hero__social">
-            <div className="hero__social__indicator">
-              <p>Follow</p>
-              <img src={SocialMediaArrow} alt="icon" />
-            </div>
-            <div className="hero__social__text">
-              <ul>
-                <li>
-                  <a
-                    href="https://twitter.com/ImmanuvelPrath1"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Twitter
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://github.com/immanuvelprathap"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Github
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.linkedin.com/in/immanuvel-prathap-/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    LinkedIn
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="hero__scrollDown">
-            <p>Scroll</p>
-            <img src={ScrollDownArrow} alt="ScrollDown Arrow" />
+          
+          <div className="animate-entry delay-3" style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+            <ThreeDCard maxTilt={12} scale={1.02} style={{ borderRadius: '16px', overflow: 'hidden', width: '100%', maxWidth: '420px' }}>
+              <TelemetryCard />
+            </ThreeDCard>
           </div>
         </div>
+        <div className="hero__right">
+          <span className="hero__intro animate-entry delay-1">Hello, I am</span>
+          <h1 className="hero__name animate-entry delay-2">Immanuvel Prathap</h1>
+          <div className="hero__desc animate-entry delay-3">
+            <PText>
+              I am a Senior Data Engineer & AI Researcher in Medicine with experience demonstrating ability to deliver valuable insights via Data Analytics and Advanced data-driven methods. Always eager to learn additional skills and solve complex challenges.
+            </PText>
+          </div>
+          <div className="hero__actions animate-entry delay-4">
+            <Button btnText="View Projects" btnLink="/projects" />
+            <Button btnText="More About Me" btnLink="/about" outline />
+          </div>
+          
+          <div className="animate-entry delay-5" style={{ width: '100%' }}>
+            <ThreeDCard maxTilt={8} scale={1.01} style={{ borderRadius: '8px', overflow: 'hidden', width: '100%' }}>
+              <InteractiveConsole />
+            </ThreeDCard>
+          </div>
+        </div>
+      </div>
+
+      <div className="hero__social">
+        <div className="social-indicator">
+          <p>Follow</p>
+          <img src={SocialMediaArrow} alt="Social indicator arrow" />
+        </div>
+        <ul>
+          <li>
+            <a href="https://github.com/immanuvelprathap" target="_blank" rel="noreferrer">
+              Github
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/immanuvel-prathap-/" target="_blank" rel="noreferrer">
+              LinkedIn
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/ImmanuvelPrath1" target="_blank" rel="noreferrer">
+              Twitter
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div className="hero__scrollDown">
+        <p>Scroll</p>
+        <img src={ScrollDownArrow} alt="Scroll down indicator" />
       </div>
     </HeroStyles>
   );
 }
-
-// import React from 'react';
-// import HeroImg from "../assets/images/Hero.jpg";
-// import Button from './Button';
-// import PText from './PText';
-// import SocialMediaArrow from"../assets/images/social-media-arrow.svg";
-// import ScrollDownArrow from"../assets/images/scroll-down-arrow.svg";
-// import styled from 'styled-components';
-
-// const HeroStyles = styled.div`
-//  .hero{
-//      height: 200vh;
-//      padding-top: 8rem;
-//      max-height: 1000px;
-//      width: 100%;
-//      text-align: center;
-//      display: flex;
-//      align-items: center;
-//      justify-content: center;
-//      position: relative;
-//  }
-//  .hero__heading{
-//      font-size: 2rem;
-//      margin-bottom: -15rem;
-//      position: relative;
-//      span{
-//          display: inline-block;
-//          width: 100%;
-//      }
-//      .greeting{
-//          color: var(--gray-1);
-//          font-size: 2rem;
-//          padding-top: 10rem;
-//      }
-//      .hero__name{
-//          font-size: 4rem;
-//          font-family: "Amatic SC", cursive;
-//          color: var(--white);
-
-//      }
-//  }
-//  .hero__img{
-//      width: 70%;
-//      height: 100%;
-//      display: inline-block;
-//      margin-left: auto;
-//      margin-right: auto;
-//      object-fit: contain;
-//      padding-top: 150px;
-//      padding-right: 30px;
-//      padding-bottom: 0px;
-//      padding-left: 30px; 
-//  }
-//  .hero__social,
-//  .hero__scrollDown{
-//      display: flex;
-//      flex-direction: column;
-//      gap: 2rem;
-//      position: absolute;
-//      bottom: 20px;
-//      width: 50px;
-//  }
-//  .hero__social{
-//      left: 50px;
-//  }
-//  .hero__scrollDown{
-//      right: 50px;
-//  }
-//  .hero__social__indicator,
-//  .hero__scrollDown{
-//      width: 50px;
-//      p{
-//          font-size: 1.6rem;
-//          transform: translateY(-70px) rotate(90deg);
-//          color: var(--orange);
-//          letter-spacing: .7rem;
-//          text-transform: uppercase;
-//      }
-//      img{
-//          max-height: 45px;
-//          width: 16px;
-//          margin: 0 auto;
-//          object-fit: contain;
-//      }
-//  }
-//  .hero__info{
-
-//      /* display: block; */
-//      /* margin: 0 auto; */
-//      text-align: center;
-//      align-items: center;
-//      justify-content: center;
-//  }
-//  .hero__scrollDown{
-//      img{
-//          max-height: 70px;
-//      }
-//  }
-//  .hero__social__text{
-//      ul{
-//          li{
-//              margin-bottom: 1rem;
-
-//          }
-//          a{
-//              display: inline-block;
-//              font-size: 1.6rem;
-//              transform: rotate(-90deg);
-//              color: var(--orange);
-//              letter-spacing: 5px;
-//              margin-bottom: 4rem;
-//              padding-right: 2.5rem;
-//              padding-bottom: 2rem;
-//              padding-left: -50rem;
-//          }
-//      }
-//  }
-//  @media only screen and (max-width: 768px){
-//      .hero{
-//          min-height: 750px;
-//      }
-//      .hero__heading{
-//          font-size: 1.4rem;
-//          margin-bottom: -3rem;
-//          .hero_name{
-//              font-size: 4.5rem;
-//          } 
-//      }
-//      .hero__img{
-//          height: 300px;
-//      }
-//      .hero__info{
-//          margin-top: 3rem;
-//      }
-//      .hero__social{
-//          left: 0px;
-//          bottom: 15%;
-//          width: 20px;
-//          .hero__social__indicator{
-//              width: 20px;
-//             p{
-//                  font-size: 1.2rem;  
-//              }
-//             img{
-//                 max-height: 22px;
-//             }   
-//         }
-//         .hero__social__text{
-//             ul{
-//                 li{
-//                     a{
-//                         font-size: 1.2rem;
-//                         margin-bottom: 1rem;
-//                     }
-//                 }
-//             }
-//         }
-//         .hero__scrollDown{
-//             right: 0;
-//             width: 20px;
-//             gap: 1rem;
-//             p{
-//                 font-size: 1.3rem;
-//             }
-//         }
-//     }
-//  }
-// `;
-
-
-// export default function Hero() {
-//   return (
-//       <HeroStyles>
-//           <div className="hero">
-//               <div className="container">
-//                   <h1 className="hero__heading">
-//                       <span className="greeting">Hello, I am </span>
-//                       <span className="hero__name">Immanuvel Prathap </span>
-//                  </h1>
-//              </div>
-
-//               <div className="hero__img">
-//                      <img src={HeroImg} alt="" />
-//               </div>
-              
-//               <div className="hero__info">
-//                   <PText>I'm a Tech-Business-Savvy. Also, an aspiring Data Scientist. </PText>
-//                   <Button btnLink={"/projects"} btnText="view my projects"/>
-//              </div>
-             
-//              <div className="hero__social">
-//                  <div className="hero__social__indicator">
-//                      <p>Follow</p>
-//                      <img src={SocialMediaArrow} alt=" social media arrow" />
-//                  </div>
-
-//                  <div className="__text">
-//                      <ul>
-//                          <li>
-//                              <a href="https://twitter.com/ImmanuvelPrath1" target="_blank" rel="noreferrer">
-//                                   Twitter
-//                              </a>
-//                          </li>
-//                          <li>
-//                              <a href="https://github.com/immanuvelprathap" target="_blank" rel="noreferrer">
-//                                  Github
-//                              </a>
-//                          </li>
-//                          <li>
-//                              <a href="https://www.linkedin.com/in/immanuvel-prathap-/" target="_blank" rel="noreferrer">
-//                                  LinkedIn
-//                              </a>
-//                          </li>
-//                      </ul>
-//                  </div>
-//              </div>
-    
-//              <div className="hero__scrollDown">
-//                  <p>Scroll</p>
-//                  <img src={ScrollDownArrow} alt="scroll down arrow"/>
-//              </div>
-//          </div>
-//      </HeroStyles>
-//     );
-// }

@@ -2,39 +2,116 @@ import React from 'react';
 import styled from 'styled-components';
 import FooterCol from './FooterCol';
 
-const FooterStyle = styled.div`
-  background-color: var(--orange);
-  padding-top: 6rem;
-  .container {
-    display: flex;
-    gap: 3rem;
+const FooterStyle = styled.footer`
+  background-color: var(--panel-bg);
+  border-top: 1px solid var(--border-color);
+  padding: 8rem 0 4rem 0;
+  margin-top: auto;
+
+  .footer__container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr 1fr;
+    gap: 4rem;
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
   }
+
+  .footer__col1 {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    
+    .footer__title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 800;
+      letter-spacing: -0.05em;
+      
+      span {
+        font-weight: 300;
+        color: var(--text-secondary);
+      }
+    }
+    
+    p {
+      font-size: 1.4rem;
+      line-height: 1.6;
+      color: var(--text-secondary);
+      max-width: 250px;
+    }
+  }
+
   .footer__col2,
   .footer__col3,
   .footer__col4 {
-    flex: 1;
-    padding-left: 10rem;
-    color: var(--black);
-    title{
-        color: var(--dark-bg);
+    color: var(--text-secondary);
+    
+    .heading {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+      letter-spacing: 0.05em;
     }
-  }
-  @media only screen and (max-width: 768px) {
-    .container {
-      flex-direction: column;
-      gap: 0rem;
-      & > div {
-        margin-top: 5rem;
+    
+    a {
+      font-size: 1.4rem;
+      color: var(--text-secondary);
+      transition: color 0.2s ease;
+      
+      &:hover {
+        color: var(--text-primary);
       }
     }
-    .footer__col1 .para {
-      max-width: 100%;
+    
+    li {
+      margin-bottom: 1.2rem;
     }
+  }
+
+  .copyright {
+    margin-top: 6rem;
+    padding-top: 3rem;
+    border-top: 1px solid var(--border-color);
+    
+    .copyright-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      width: 90%;
+      margin: 0 auto;
+      font-family: var(--font-mono);
+      font-size: 1.2rem;
+      color: var(--text-muted);
+    }
+  }
+
+  @media only screen and (max-width: 960px) {
+    .footer__container {
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+    }
+  }
+
+  @media only screen and (max-width: 580px) {
+    padding: 6rem 0 3rem 0;
+    
+    .footer__container {
+      grid-template-columns: 1fr;
+      gap: 4rem;
+    }
+    
     .copyright {
-      .container {
-        div {
-          margin-top: 0;
-        }
+      margin-top: 4rem;
+      
+      .copyright-container {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
       }
     }
   }
@@ -43,10 +120,18 @@ const FooterStyle = styled.div`
 export default function Footer() {
   return (
     <FooterStyle>
-      <div className="container">
+      <div className="footer__container">
+        <div className="footer__col1">
+          <div className="footer__title">
+            Prathap<span>.in</span>
+          </div>
+          <p>
+            Data Engineer and AI Researcher, building optimization and automated systems. Inspired by art, design, and technology.
+          </p>
+        </div>
         <div className="footer__col2">
           <FooterCol
-            heading="Go to"
+            heading="Explore"
             links={[
               {
                 title: 'Home',
@@ -54,60 +139,66 @@ export default function Footer() {
                 type: 'Link',
               },
               {
-                type: 'Link',
                 title: 'About',
                 path: '/about',
+                type: 'Link',
               },
               {
-                type: 'Link',
                 title: 'Projects',
                 path: '/projects',
+                type: 'Link',
               },
               {
-                type: 'Link',
                 title: 'Contact',
                 path: '/contact',
+                type: 'Link',
               },
             ]}
           />
         </div>
         <div className="footer__col3">
           <FooterCol
-            heading="Contact Info"
+            heading="Get in Touch"
             links={[
               {
-                title: '+91 7022207916',
-                path: 'tel:+91 7022207916',
+                title: '+91 70222 07916',
+                path: 'tel:+917022207916',
               },
               {
                 title: 'mailtoimmanuvel@gmail.com',
                 path: 'mailto:mailtoimmanuvel@gmail.com',
               },
               {
-                title: '#421,Hommadevanahalli, Gottigere Post, Bannerghatta Road, Bangalore 560083.',
-                path: 'https://www.google.com/maps/place/Akshay+Mosaic+Flooring/@12.8462151,77.5980938,17z/data=!3m1!4b1!4m5!3m4!1s0x3bae6ae45f2a6c89:0x84d875d2e48b9a74!8m2!3d12.8462099!4d77.6002825',
+                title: 'Bern, Switzerland',
+                path: 'https://maps.google.com/?q=Bern,Switzerland',
               },
             ]}
           />
         </div>
         <div className="footer__col4">
           <FooterCol
-            heading="Let's be Social"
+            heading="Connect"
             links={[
               {
-                title: 'Facebook',
-                path: 'http://facebook.com',
-              },
-              {
-                title: 'Twitter',
-                path: 'http://twitter.com',
+                title: 'GitHub',
+                path: 'https://github.com/immanuvelprathap',
               },
               {
                 title: 'LinkedIn',
-                path: 'https://linkedin.com',
+                path: 'https://www.linkedin.com/in/immanuvel-prathap-/',
+              },
+              {
+                title: 'Twitter',
+                path: 'https://twitter.com/ImmanuvelPrath1',
               },
             ]}
           />
+        </div>
+      </div>
+      <div className="copyright">
+        <div className="copyright-container">
+          <p>© {new Date().getFullYear()} - Immanuvel Prathap</p>
+          <p>Designed & Engineered in Monochrome</p>
         </div>
       </div>
     </FooterStyle>
